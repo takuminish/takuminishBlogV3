@@ -44,4 +44,10 @@ app.get(
   }
 );
 
+app.get("/404", (c) => {
+  return c.render(<h1>404 NotFound. 記事が見つかりません</h1>, {
+    title: "記事が見つかりません",
+  });
+});
+
 export default app;
