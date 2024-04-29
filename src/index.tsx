@@ -3,18 +3,22 @@ import { renderer } from "./renderer";
 import { ssgParams } from "hono/ssg";
 import { getArticleDetailBySlug, getArticleHeads } from "./articles/articles";
 
-const TITLE = "takuminishのブログ";
+const BASE_TITLE = "takuminishのブログ" as const;
+
+function createTitle(title: string) {
+  return `${BASE_TITLE} | ${title}`;
+}
 
 const app = new Hono();
 
 app.use(renderer);
 
 app.get("/", (c) => {
-  return c.render(<h1>Hello!</h1>, { title: TITLE });
+  return c.redirect("/articles");
 });
 
 app.get("/articles", (c) => {
-  return c.render(<h1>Articles!</h1>, { title: `${TITLE} | 記事一覧` });
+  return c.render(<h1>Articles!</h1>, { title: createTitle("記事一覧") });
 });
 
 app.get(
@@ -30,7 +34,7 @@ app.get(
       article = await getArticleDetailBySlug(slug);
     } catch (e) {
       return c.render(<h1>404 NotFound. 記事が見つかりません</h1>, {
-        title: "記事が見つかりません",
+        title: createTitle("記事が見つかりません"),
       });
     }
 
@@ -39,14 +43,14 @@ app.get(
         <h1>{article.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: article.body }}></div>
       </>,
-      { title: `${TITLE} | ${article.title}` }
+      { title: createTitle(article.title) }
     );
   }
 );
 
 app.get("/404", (c) => {
   return c.render(<h1>404 NotFound. 記事が見つかりません</h1>, {
-    title: "記事が見つかりません",
+    title: createTitle("記事が見つかりません"),
   });
 });
 
