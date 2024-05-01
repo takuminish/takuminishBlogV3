@@ -8,4 +8,7 @@ export type ArticleDetail = {
 
   export type ArticleHead = {
     slug: string;
+    title: string;
+    date: Date;
+    description: string;
   }

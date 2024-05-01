@@ -2,7 +2,12 @@ import { ArticleDetail, ArticleHead } from "./entity/articles";
 import { getArticles } from "./infra/articles.repository";
 
 export function getArticleHeads(): ArticleHead[] {
-  return getArticleDetails().map((article) => ({ slug: article.slug }));
+  return getArticleDetails().map((article) => ({
+    slug: article.slug,
+    title: article.title,
+    date: article.date,
+    description: article.description,
+  }));
 }
 
 export function getArticleDetailBySlug(slug: string): ArticleDetail {
