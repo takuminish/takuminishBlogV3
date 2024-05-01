@@ -1,13 +1,20 @@
-import { jsxRenderer } from 'hono/jsx-renderer'
+import { css, Style } from "hono/css";
+import { jsxRenderer } from "hono/jsx-renderer";
+
+const bodyClass = css`
+  padding: 0 50px;
+  margin: 0;
+  background-color: #edf2f7;
+`;
 
 export const renderer = jsxRenderer(({ children, title }) => {
   return (
     <html>
       <head>
-        <link href="/static/style.css" rel="stylesheet" />
+        <Style />
         <title>{title}</title>
       </head>
-      <body>{children}</body>
+      <body class={bodyClass}>{children}</body>
     </html>
-  )
-})
+  );
+});

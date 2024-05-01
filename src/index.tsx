@@ -3,7 +3,6 @@ import { renderer } from "./renderer";
 import { ssgParams } from "hono/ssg";
 import {
   getArticleDetailBySlug,
-  getArticleDetails,
   getArticleHeads,
 } from "./articles/articles";
 import ArticleIndexPage from "./components/pages/ArticleIndexPage";

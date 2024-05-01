@@ -1,4 +1,4 @@
-import { css, Style } from "hono/css";
+import { css } from "hono/css";
 import { ArticleDetail } from "../../articles/entity/articles";
 
 type Props = {
@@ -9,6 +9,7 @@ const articleBodyClass = css`
   /*light*/
 
   .markdown-body {
+    padding: 0 20px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     margin: 0;
@@ -1110,7 +1111,6 @@ function ArticleDetailPage(props: Props) {
 
   return (
     <>
-      <Style />
       <div class={articleMetadataClass}>
         <h1>{article.title}</h1>
         <p>{article.description}</p>

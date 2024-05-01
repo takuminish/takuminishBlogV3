@@ -1,20 +1,35 @@
+import { css } from "hono/css";
 import { ArticleHead } from "../../articles/entity/articles";
 
 type Props = {
   articles: ArticleHead[];
 };
 
+const articleClass = css`
+  border: 1px solid #0e97d8;
+  border-radius: 10px;
+  padding: 10px;
+  width: 40%;
+  background-color: #ffffff;
+`;
+
+const desctiptionClass = css`
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+`;
+
 function ArticleIndexPage(props: Props) {
   const { articles } = props;
 
   const articleContents = articles.map((article) => {
     return (
-      <div>
-        <p>
+      <div class={articleClass}>
+        <h3>
           <a href={generateArticleUrl(article.slug)}>{article.title}</a>
-        </p>{" "}
-        <p>{article.description}</p>
-        <p>{article.date.toISOString()}</p>
+        </h3>
+        <p class={desctiptionClass}>{article.description}</p>
+        <p>作成日: {article.date.toISOString()}</p>
       </div>
     );
   });
