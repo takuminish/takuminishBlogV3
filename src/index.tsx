@@ -1,10 +1,7 @@
 import { Hono } from "hono";
 import { renderer } from "./renderer";
 import { ssgParams } from "hono/ssg";
-import {
-  getArticleDetailBySlug,
-  getArticleHeads,
-} from "./articles/articles";
+import { getArticleDetailBySlug, getArticleHeads } from "./articles/articles";
 import ArticleIndexPage from "./components/pages/ArticleIndexPage";
 import ArticleDetailPage from "./components/pages/ArticleDetailPage";
 import NotFoundPage from "./components/pages/NotFoundPage";
@@ -20,10 +17,6 @@ const app = new Hono();
 app.use(renderer);
 
 app.get("/", (c) => {
-  return c.redirect("/articles");
-});
-
-app.get("/articles", (c) => {
   const articles = getArticleHeads();
 
   return c.render(<ArticleIndexPage articles={articles} />, {
