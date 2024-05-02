@@ -9,7 +9,7 @@ const articleBodyClass = css`
   /*light*/
 
   .markdown-body {
-    padding: 0 20px;
+    padding: 20px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     margin: 0;

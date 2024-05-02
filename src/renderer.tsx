@@ -1,10 +1,10 @@
 import { css, Style } from "hono/css";
 import { jsxRenderer } from "hono/jsx-renderer";
+import Footer from "./components/shared/Footer";
+import BlogBody from "./components/shared/BlogBody";
 
 const bodyClass = css`
-  padding: 0 50px;
   margin: 0;
-  background-color: #edf2f7;
 `;
 
 export const renderer = jsxRenderer(({ children, title }) => {
@@ -14,7 +14,10 @@ export const renderer = jsxRenderer(({ children, title }) => {
         <Style />
         <title>{title}</title>
       </head>
-      <body class={bodyClass}>{children}</body>
+      <body class={bodyClass}>
+        <BlogBody>{children}</BlogBody>
+        <Footer />
+      </body>
     </html>
   );
 });

@@ -4,7 +4,6 @@ date: "2015-05-01T22:12:03.284Z"
 description: "ここには概要が入ります"
 ---
 
----
 __Advertisement :)__
 
 - __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image

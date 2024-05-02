@@ -4,7 +4,6 @@ date: "2024-05-01T22:12:03.284Z"
 description: "このブログはhonoのSSGで構築しており、CloudflarePagesにデプロイしています。projectの作成からデプロイまでの手順を残します。"
 ---
 
----
 
 # hono
 
