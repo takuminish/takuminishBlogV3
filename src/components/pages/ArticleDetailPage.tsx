@@ -1111,16 +1111,13 @@ function ArticleDetailPage(props: Props) {
 
   return (
     <>
-      <div class={articleMetadataClass}>
+      <div>
         <h1>{article.title}</h1>
         <p>{article.description}</p>
         <p>{article.date.toISOString()}</p>
       </div>
-      <div class={articleBodyClass}>
-        <div
-          class="markdown-body"
-          dangerouslySetInnerHTML={{ __html: article.body }}
-        ></div>
+      <div>
+        <div dangerouslySetInnerHTML={{ __html: article.body }}></div>
       </div>
     </>
   );

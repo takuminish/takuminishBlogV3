@@ -1,8 +1,9 @@
 import { css } from "hono/css";
 import { Child } from "hono/jsx";
+import { ReactNode } from "react";
 
 type Props = {
-  children: Child;
+  children: ReactNode;
 };
 
 const layoutClass = css`
@@ -13,7 +14,7 @@ const layoutClass = css`
 
 function BlogBody(props: Props) {
   const { children } = props;
-  return <div class={layoutClass}>{children}</div>;
+  return <div>{children}</div>;
 }
 
 export default BlogBody;

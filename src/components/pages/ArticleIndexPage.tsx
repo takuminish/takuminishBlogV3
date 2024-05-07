@@ -28,7 +28,7 @@ function ArticleIndexPage(props: Props) {
 
   const articleContents = articles.map((article) => {
     return (
-      <div class={articleClass}>
+      <div>
         <h3>
           <a href={generateArticleUrl(article.slug)}>{article.title}</a>
         </h3>
@@ -40,10 +40,10 @@ function ArticleIndexPage(props: Props) {
 
   return (
     <>
-      <div class={titleClass}>
+      <div>
         <h1>記事一覧</h1>
       </div>
-      <div class={gridClass}>{articleContents}</div>
+      <div>{articleContents}</div>
     </>
   );
 }

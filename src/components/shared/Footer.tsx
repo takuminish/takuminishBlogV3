@@ -5,7 +5,7 @@ const footerClass = css`
 `;
 
 function Footer() {
-  return <footer class={footerClass}></footer>;
+  return <footer></footer>;
 }
 
 export default Footer;
