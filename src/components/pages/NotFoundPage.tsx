@@ -1,11 +1,3 @@
-import { css } from "hono/css";
-
-const titleClass = css`
-  text-align: center;
-  display: grid;
-  place-content: center;
-`;
-
 function NotFoundPage() {
   return (
     <div>

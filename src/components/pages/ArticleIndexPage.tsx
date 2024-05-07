@@ -1,27 +1,8 @@
-import { css } from "hono/css";
 import { ArticleHead } from "../../articles/entity/articles";
 
 type Props = {
   articles: ArticleHead[];
 };
-
-const gridClass = css`
-  display: grid;
-  gap: 20px;
-`;
-const titleClass = css`
-  text-align: center;
-  display: grid;
-  place-content: center;
-`;
-
-const articleClass = css`
-  border: 1px solid #0e97d8;
-  border-radius: 10px;
-  padding: 10px;
-  width: 100%;
-  background-color: #ffffff;
-`;
 
 function ArticleIndexPage(props: Props) {
   const { articles } = props;
