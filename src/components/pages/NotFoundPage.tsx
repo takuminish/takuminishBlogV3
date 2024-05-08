@@ -1,16 +1,10 @@
-import { css } from "hono/css";
-
-const titleClass = css`
-  text-align: center;
-  display: grid;
-  place-content: center;
-`;
+import { Box, Heading } from "@yamada-ui/react";
 
 function NotFoundPage() {
   return (
-    <div class={titleClass}>
-      <h1>404 NotFound. 記事が見つかりません</h1>
-    </div>
+    <Box>
+      <Heading>404 NotFound. 記事が見つかりません</Heading>
+    </Box>
   );
 }
 

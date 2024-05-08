@@ -1,19 +1,21 @@
-import { css } from "hono/css";
-import { Child } from "hono/jsx";
+import { Box } from "@yamada-ui/react";
+import { ReactNode } from "react";
 
 type Props = {
-  children: Child;
+  children: ReactNode;
 };
-
-const layoutClass = css`
-  min-height: 80vh;
-  padding: 0 50px 50px;
-  background-color: #edf2f7;
-`;
 
 function BlogBody(props: Props) {
   const { children } = props;
-  return <div class={layoutClass}>{children}</div>;
+  return (
+    <Box
+      maxW={{ base: "1024px" }}
+      padding={{ base: "2rem" }}
+      minHeight='85vh'
+    >
+      {children}
+    </Box>
+  );
 }
 
 export default BlogBody;

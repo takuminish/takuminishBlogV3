@@ -15,7 +15,7 @@ description: "このブログはhonoのSSGで構築しており、CloudflarePage
 
 今回は、package manager に npm を選択しています。
 
-```
+```bash
 $ npm create hono@latest
 ? Target directory takuminishBlog
 ? Which template do you want to use? cloudflare-pages
@@ -27,7 +27,7 @@ $ npm create hono@latest
 
 すると、以下のディレクトリ構成が自動で生成されます。
 
-```
+```bash
 ./
 ├── package.json
 ├── public
@@ -44,7 +44,7 @@ $ npm create hono@latest
 
 [@hono/vite-ssg](https://github.com/honojs/vite-plugins/tree/main/packages/ssg)を使用して、SSG の設定をしていきます。
 
-```
+```bash
 $ npm i -D @hono/vite-ssg
 ```
 

@@ -1,50 +1,51 @@
-import { css } from "hono/css";
+import {
+  Box,
+  Flex,
+  Heading,
+  LinkBox,
+  LinkOverlay,
+  Text,
+} from "@yamada-ui/react";
 import { ArticleHead } from "../../articles/entity/articles";
 
 type Props = {
   articles: ArticleHead[];
 };
 
-const gridClass = css`
-  display: grid;
-  gap: 20px;
-`;
-const titleClass = css`
-  text-align: center;
-  display: grid;
-  place-content: center;
-`;
-
-const articleClass = css`
-  border: 1px solid #0e97d8;
-  border-radius: 10px;
-  padding: 10px;
-  width: 100%;
-  background-color: #ffffff;
-`;
-
 function ArticleIndexPage(props: Props) {
   const { articles } = props;
 
   const articleContents = articles.map((article) => {
     return (
-      <div class={articleClass}>
-        <h3>
-          <a href={generateArticleUrl(article.slug)}>{article.title}</a>
-        </h3>
-        <p>{article.description}</p>
-        <p>作成日: {article.date.toISOString()}</p>
-      </div>
+      <LinkBox
+        as="article"
+        maxW={{ base: "100%" }}
+        rounded="md"
+        p="md"
+        border="1px solid"
+        borderColor="inherit"
+        boxShadow="md"
+      >
+        <LinkOverlay
+          href={generateArticleUrl(article.slug)}
+        ></LinkOverlay>
+        <Heading size="md"> {article.title}</Heading>
+
+        <Text>{article.description}</Text>
+        <Text>投稿日: {article.date.toISOString()}</Text>
+      </LinkBox>
     );
   });
 
   return (
-    <>
-      <div class={titleClass}>
-        <h1>記事一覧</h1>
-      </div>
-      <div class={gridClass}>{articleContents}</div>
-    </>
+    <Flex direction="column" justifyContent="center">
+      <Box>
+        <Heading>記事一覧</Heading>
+      </Box>
+      <Flex gap="md" direction="column">
+        {articleContents}
+      </Flex>
+    </Flex>
   );
 }
 
