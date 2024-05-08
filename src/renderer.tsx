@@ -1,6 +1,7 @@
-import { reactRenderer } from '@hono/react-renderer'
+import { reactRenderer } from "@hono/react-renderer";
 import Footer from "./components/shared/Footer";
 import BlogBody from "./components/shared/BlogBody";
+import { Flex, UIProvider } from "@yamada-ui/react";
 
 export const renderer = reactRenderer(({ children, title }) => {
   return (
@@ -9,8 +10,12 @@ export const renderer = reactRenderer(({ children, title }) => {
         <title>{title}</title>
       </head>
       <body>
-        <BlogBody>{children}</BlogBody>
-        <Footer />
+        <UIProvider>
+          <Flex justifyContent="center">
+            <BlogBody>{children}</BlogBody>
+          </Flex>
+          <Footer />
+        </UIProvider>
       </body>
     </html>
   );

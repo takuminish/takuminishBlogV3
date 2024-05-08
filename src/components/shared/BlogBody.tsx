@@ -1,3 +1,4 @@
+import { Box } from "@yamada-ui/react";
 import { ReactNode } from "react";
 
 type Props = {
@@ -6,7 +7,14 @@ type Props = {
 
 function BlogBody(props: Props) {
   const { children } = props;
-  return <div>{children}</div>;
+  return (
+    <Box
+      maxW={{ base: "1024px" }}
+      padding={{ base: "2rem" }}
+    >
+      {children}
+    </Box>
+  );
 }
 
 export default BlogBody;

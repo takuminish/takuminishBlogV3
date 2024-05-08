@@ -1,3 +1,11 @@
+import {
+  Box,
+  Flex,
+  Heading,
+  LinkBox,
+  LinkOverlay,
+  Text,
+} from "@yamada-ui/react";
 import { ArticleHead } from "../../articles/entity/articles";
 
 type Props = {
@@ -9,23 +17,35 @@ function ArticleIndexPage(props: Props) {
 
   const articleContents = articles.map((article) => {
     return (
-      <div>
-        <h3>
-          <a href={generateArticleUrl(article.slug)}>{article.title}</a>
-        </h3>
-        <p>{article.description}</p>
-        <p>作成日: {article.date.toISOString()}</p>
-      </div>
+      <LinkBox
+        as="article"
+        maxW={{ base: "100%" }}
+        rounded="md"
+        p="md"
+        border="1px solid"
+        borderColor="inherit"
+        boxShadow="md"
+      >
+        <LinkOverlay
+          href={generateArticleUrl(article.slug)}
+        ></LinkOverlay>
+        <Heading size="md"> {article.title}</Heading>
+
+        <Text>{article.description}</Text>
+        <Text>投稿日: {article.date.toISOString()}</Text>
+      </LinkBox>
     );
   });
 
   return (
-    <>
-      <div>
-        <h1>記事一覧</h1>
-      </div>
-      <div>{articleContents}</div>
-    </>
+    <Flex direction="column" justifyContent="center">
+      <Box>
+        <Heading>記事一覧</Heading>
+      </Box>
+      <Flex gap="md" direction="column">
+        {articleContents}
+      </Flex>
+    </Flex>
   );
 }
 
