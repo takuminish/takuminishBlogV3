@@ -11,6 +11,7 @@ function BlogBody(props: Props) {
     <Box
       maxW={{ base: "1024px" }}
       padding={{ base: "2rem" }}
+      minHeight='85vh'
     >
       {children}
     </Box>
