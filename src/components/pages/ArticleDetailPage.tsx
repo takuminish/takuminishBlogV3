@@ -12,7 +12,9 @@ function ArticleDetailPage(props: Props) {
   return (
     <>
       <Box>
-        <Heading>{article.title}</Heading>
+        <Heading bgGradient="linear(to-l, #7928CA, #FF0080)" bgClip="text">
+          <Center>{article.title}</Center>
+        </Heading>
         <Center>{article.description}</Center>
         <Center>投稿日: {article.date.toISOString()}</Center>
       </Box>

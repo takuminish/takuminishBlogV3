@@ -29,7 +29,7 @@ function ArticleIndexPage(props: Props) {
         <LinkOverlay
           href={generateArticleUrl(article.slug)}
         ></LinkOverlay>
-        <Heading size="md"> {article.title}</Heading>
+        <Heading bgGradient="linear(to-l, #7928CA, #FF0080)" bgClip="text" size='md'> {article.title}</Heading>
 
         <Text>{article.description}</Text>
         <Text>投稿日: {article.date.toISOString()}</Text>
