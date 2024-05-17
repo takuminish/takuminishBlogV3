@@ -16,14 +16,15 @@ const articles = await (() => {
         content,
       } = matter.read(filePath);
 
+      const slug = path.parse(path.basename(filePath)).name;
+
       const article: ArticleDetail = {
-        slug: path.parse(path.basename(filePath)).name,
+        slug,
         title,
         date: new Date(date),
         description,
         body: content,
       };
-
       return article;
     })
   );
