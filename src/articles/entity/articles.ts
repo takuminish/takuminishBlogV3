@@ -1,14 +1,15 @@
 export type ArticleDetail = {
-    slug: string;
-    title: string;
-    date: Date;
-    description: string;
-    body: string;
-  };
+  slug: string;
+  title: string;
+  date: Date;
+  description: string;
+  ogp: string;
+  body: string;
+};
 
-  export type ArticleHead = {
-    slug: string;
-    title: string;
-    date: Date;
-    description: string;
-  }
+export type ArticleHead = {
+  slug: string;
+  title: string;
+  date: Date;
+  description: string;
+};

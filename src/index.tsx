@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import { renderer } from "./renderer";
 import { ssgParams } from "hono/ssg";
+import { serveStatic } from "@hono/node-server/serve-static";
 import { getArticleDetailBySlug, getArticleHeads } from "./articles/articles";
 import ArticleIndexPage from "./components/pages/ArticleIndexPage";
 import ArticleDetailPage from "./components/pages/ArticleDetailPage";
@@ -15,6 +16,8 @@ function createTitle(title: string) {
 const app = new Hono();
 
 app.use(renderer);
+
+app.use("/static/*", serveStatic({ root: "./public/static" }));
 
 app.get("/", (c) => {
   const articles = getArticleHeads();
