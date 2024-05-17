@@ -34,7 +34,7 @@ app.get(
     return c.render(<ArticleDetailPage article={article} />, {
       title: article.title,
       description: article.description,
-      ogImagePath: `/images/${article.slug}`,
+      ogImagePath: `/images/${article.slug}.png`,
     });
   }
 );

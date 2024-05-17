@@ -5,6 +5,7 @@ import { Flex, UIProvider } from "@yamada-ui/react";
 
 export const renderer = reactRenderer(
   ({ children, title, description, ogImagePath }) => {
+    console.log(title);
     return (
       <html lang="ja">
         <head>
@@ -31,7 +32,7 @@ export const renderer = reactRenderer(
           <meta name="twitter:site" content="takuminish" />
           <meta name="twitter:description" content={description} />
           <meta name="twitter:title" content={title} />
-          <title>{title} | takuminishのブログ</title>
+          <title>{`${title} | takuminishのブログ`}</title>
         </head>
         <body>
           <UIProvider>
