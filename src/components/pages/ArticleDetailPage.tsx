@@ -19,7 +19,6 @@ function ArticleDetailPage(props: Props) {
         <Center>投稿日: {article.date.toISOString()}</Center>
       </Box>
       <Markdown>{article.body}</Markdown>
-      <img src={`data:image/png;base64,${article.ogp}`} />
     </>
   );
 }

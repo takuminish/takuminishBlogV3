@@ -3,7 +3,6 @@ export type ArticleDetail = {
   title: string;
   date: Date;
   description: string;
-  ogp: string;
   body: string;
 };
 

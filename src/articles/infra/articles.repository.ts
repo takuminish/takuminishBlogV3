@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import { ArticleDetail } from "../entity/articles";
 import matter from "gray-matter";
-import createOGP from "./ogpHelper";
 
 const FILE_PATH = "content/articles" as const;
 const articlesFile = fs.readdirSync(FILE_PATH);
@@ -18,7 +17,6 @@ const articles = await (() => {
       } = matter.read(filePath);
 
       const slug = path.parse(path.basename(filePath)).name;
-      const ogp = await createOGP(title);
 
       const article: ArticleDetail = {
         slug,
@@ -26,7 +24,6 @@ const articles = await (() => {
         date: new Date(date),
         description,
         body: content,
-        ogp
       };
       return article;
     })

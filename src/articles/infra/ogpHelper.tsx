@@ -3,7 +3,7 @@ import fs from "fs/promises";
 import path from "path";
 import sharp from "sharp";
 
-const createOGP = async (title: string): Promise<string> => {
+const createOGP = async (title: string): Promise<Buffer> => {
   const robotoArrayBuffer = await fs.readFile(
     path.resolve(path.join("font"), "NotoSansJP-Bold.ttf")
   );
@@ -66,8 +66,7 @@ const createOGP = async (title: string): Promise<string> => {
     }
   );
 
-  const png = await sharp(Buffer.from(svg)).png().toBuffer();
-  return png.toString("base64");
+  return sharp(Buffer.from(svg)).png().toBuffer();
 };
 
 export default createOGP;
