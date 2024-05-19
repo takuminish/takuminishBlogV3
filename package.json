@@ -4,7 +4,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "wrangler pages dev dist",
-    "deploy": "$npm_execpath run build && wrangler pages deploy dist"
+    "deploy": "$npm_execpath run build && wrangler pages deploy dist",
+    "check": "biome check ./src",
+    "check:fix" : "biome check --apply ./src"
   },
   "dependencies": {
     "@hono/react-renderer": "^0.2.0",
