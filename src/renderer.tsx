@@ -5,7 +5,6 @@ import { Flex, UIProvider } from "@yamada-ui/react";
 
 export const renderer = reactRenderer(
   ({ children, title, description, ogImagePath }) => {
-    console.log(title);
     return (
       <html lang="ja">
         <head>
