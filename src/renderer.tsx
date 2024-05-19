@@ -14,7 +14,7 @@ export const renderer = reactRenderer(
             content="width=device-width, initial-scale=1.0"
           />
           <meta property="og:locale" content="ja_JP" />
-          <meta property="og:site_name" content="takuminishのブログ" />
+          <meta property="og:site_name" content={BLOG_TITLE} />
           <meta property="og:title" content={title} />
           <meta property="og:description" content={description} />
           {ogImagePath && (
@@ -22,7 +22,7 @@ export const renderer = reactRenderer(
               property="og:image"
               content={new URL(
                 ogImagePath,
-                "https://takuminish.pages.dev"
+                BLOG_URL
               ).toString()}
             />
           )}
@@ -31,7 +31,7 @@ export const renderer = reactRenderer(
           <meta name="twitter:site" content="takuminish" />
           <meta name="twitter:description" content={description} />
           <meta name="twitter:title" content={title} />
-          <title>{`${title} | takuminishのブログ`}</title>
+          <title>{`${title} | ${BLOG_TITLE}`}</title>
         </head>
         <body>
           <UIProvider>

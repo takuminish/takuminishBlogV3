@@ -3,13 +3,12 @@ import path from "path";
 import { ArticleDetail } from "../entity/articles";
 import matter from "gray-matter";
 
-const FILE_PATH = "content/articles" as const;
-const articlesFile = fs.readdirSync(FILE_PATH);
+const articlesFile = fs.readdirSync(ARTICLE_FILE_PATH);
 
 const articles = await (() => {
   return Promise.all(
     articlesFile.map(async (file) => {
-      const filePath = path.join(FILE_PATH, file);
+      const filePath = path.join(ARTICLE_FILE_PATH, file);
 
       const {
         data: { title, date, description },

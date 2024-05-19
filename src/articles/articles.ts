@@ -1,5 +1,6 @@
 import { ArticleDetail, ArticleHead } from "./entity/articles";
 import { getArticles } from "./infra/articles.repository";
+import createOGPFn from "./infra/ogps.repository";
 
 export function getArticleHeads(): ArticleHead[] {
   return getArticleDetails().map((article) => ({
@@ -22,4 +23,9 @@ export function getArticleDetailBySlug(slug: string): ArticleDetail {
 
 export function getArticleDetails(): ArticleDetail[] {
   return getArticles();
+}
+
+export function createOGP(title: string): Promise<Buffer> {
+  return createOGPFn(title);
+
 }

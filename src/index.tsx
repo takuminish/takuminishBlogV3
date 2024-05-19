@@ -1,11 +1,14 @@
 import { Hono } from "hono";
 import { renderer } from "./renderer";
 import { ssgParams } from "hono/ssg";
-import { getArticleDetailBySlug, getArticleHeads } from "./articles/articles";
+import {
+  getArticleDetailBySlug,
+  getArticleHeads,
+  createOGP,
+} from "./articles/articles";
 import ArticleIndexPage from "./components/pages/ArticleIndexPage";
 import ArticleDetailPage from "./components/pages/ArticleDetailPage";
 import NotFoundPage from "./components/pages/NotFoundPage";
-import createOGP from "./articles/infra/ogpHelper";
 
 const app = new Hono();
 
@@ -26,10 +29,10 @@ app.get(
   ssgParams(async () =>
     (await getArticleHeads()).map((head) => ({ slug: head.slug }))
   ),
-  async (c) => {
+  (c) => {
     const slug = c.req.param("slug");
 
-    const article = await getArticleDetailBySlug(slug);
+    const article = getArticleDetailBySlug(slug);
 
     return c.render(<ArticleDetailPage article={article} />, {
       title: article.title,
@@ -49,7 +52,7 @@ app.get(
   async (c) => {
     const slug = c.req.param("slug");
 
-    const title = await getArticleDetailBySlug(slug).title;
+    const title = getArticleDetailBySlug(slug).title;
 
     c.header("Content-Type", "image/png");
     return c.body(await createOGP(title));

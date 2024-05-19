@@ -47,7 +47,7 @@ const createOGP = async (title: string): Promise<Buffer> => {
             fontWeight: 700,
           }}
         >
-          takuminishのブログ
+          {BLOG_TITLE}
         </span>
       </div>
     </div>,
