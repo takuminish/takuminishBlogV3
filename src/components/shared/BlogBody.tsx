@@ -1,5 +1,5 @@
 import { Box } from "@yamada-ui/react";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
@@ -8,11 +8,7 @@ type Props = {
 function BlogBody(props: Props) {
   const { children } = props;
   return (
-    <Box
-      maxW={{ base: "1024px" }}
-      padding={{ base: "2rem" }}
-      minHeight='85vh'
-    >
+    <Box maxW={{ base: "1024px" }} padding={{ base: "2rem" }} minHeight="85vh">
       {children}
     </Box>
   );

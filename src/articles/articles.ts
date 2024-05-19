@@ -1,4 +1,4 @@
-import { ArticleDetail, ArticleHead } from "./entity/articles";
+import type { ArticleDetail, ArticleHead } from "./entity/articles";
 import { getArticles } from "./infra/articles.repository";
 import createOGPFn from "./infra/ogps.repository";
 
@@ -27,5 +27,4 @@ export function getArticleDetails(): ArticleDetail[] {
 
 export function createOGP(title: string): Promise<Buffer> {
   return createOGPFn(title);
-
 }

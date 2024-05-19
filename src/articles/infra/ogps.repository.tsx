@@ -1,11 +1,12 @@
+import fs from "node:fs/promises";
+import path from "node:path";
 import satori from "satori";
-import fs from "fs/promises";
-import path from "path";
 import sharp from "sharp";
+import { BLOG_TITLE } from "../../constants";
 
 const createOGP = async (title: string): Promise<Buffer> => {
   const robotoArrayBuffer = await fs.readFile(
-    path.resolve(path.join("font"), "NotoSansJP-Bold.ttf")
+    path.resolve(path.join("font"), "NotoSansJP-Bold.ttf"),
   );
   const svg = await satori(
     <div
@@ -63,7 +64,7 @@ const createOGP = async (title: string): Promise<Buffer> => {
           style: "normal",
         },
       ],
-    }
+    },
   );
 
   return sharp(Buffer.from(svg)).png().toBuffer();

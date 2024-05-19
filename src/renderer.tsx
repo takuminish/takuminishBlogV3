@@ -1,7 +1,8 @@
 import { reactRenderer } from "@hono/react-renderer";
-import Footer from "./components/shared/Footer";
-import BlogBody from "./components/shared/BlogBody";
 import { Flex, UIProvider } from "@yamada-ui/react";
+import BlogBody from "./components/shared/BlogBody";
+import Footer from "./components/shared/Footer";
+import { BLOG_TITLE, BLOG_URL } from "./constants";
 
 export const renderer = reactRenderer(
   ({ children, title, description, ogImagePath }) => {
@@ -20,10 +21,7 @@ export const renderer = reactRenderer(
           {ogImagePath && (
             <meta
               property="og:image"
-              content={new URL(
-                ogImagePath,
-                BLOG_URL
-              ).toString()}
+              content={new URL(ogImagePath, BLOG_URL).toString()}
             />
           )}
 
@@ -43,5 +41,5 @@ export const renderer = reactRenderer(
         </body>
       </html>
     );
-  }
+  },
 );

@@ -6,7 +6,7 @@ import {
   LinkOverlay,
   Text,
 } from "@yamada-ui/react";
-import { ArticleHead } from "../../articles/entity/articles";
+import type { ArticleHead } from "../../articles/entity/articles";
 
 type Props = {
   articles: ArticleHead[];
@@ -18,6 +18,7 @@ function ArticleIndexPage(props: Props) {
   const articleContents = articles.map((article) => {
     return (
       <LinkBox
+        key={article.slug}
         as="article"
         maxW={{ base: "100%" }}
         rounded="md"
@@ -26,10 +27,15 @@ function ArticleIndexPage(props: Props) {
         borderColor="inherit"
         boxShadow="md"
       >
-        <LinkOverlay
-          href={generateArticleUrl(article.slug)}
-        ></LinkOverlay>
-        <Heading bgGradient="linear(to-l, #7928CA, #FF0080)" bgClip="text" size='md'> {article.title}</Heading>
+        <LinkOverlay href={generateArticleUrl(article.slug)} />
+        <Heading
+          bgGradient="linear(to-l, #7928CA, #FF0080)"
+          bgClip="text"
+          size="md"
+        >
+          {" "}
+          {article.title}
+        </Heading>
 
         <Text>{article.description}</Text>
         <Text>投稿日: {article.date.toISOString()}</Text>

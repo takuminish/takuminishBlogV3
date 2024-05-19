@@ -1,14 +1,14 @@
 import { Hono } from "hono";
-import { renderer } from "./renderer";
 import { ssgParams } from "hono/ssg";
 import {
+  createOGP,
   getArticleDetailBySlug,
   getArticleHeads,
-  createOGP,
 } from "./articles/articles";
-import ArticleIndexPage from "./components/pages/ArticleIndexPage";
 import ArticleDetailPage from "./components/pages/ArticleDetailPage";
+import ArticleIndexPage from "./components/pages/ArticleIndexPage";
 import NotFoundPage from "./components/pages/NotFoundPage";
+import { renderer } from "./renderer";
 
 const app = new Hono();
 
@@ -27,7 +27,7 @@ app.get("/", (c) => {
 app.get(
   "/articles/:slug",
   ssgParams(async () =>
-    (await getArticleHeads()).map((head) => ({ slug: head.slug }))
+    (await getArticleHeads()).map((head) => ({ slug: head.slug })),
   ),
   (c) => {
     const slug = c.req.param("slug");
@@ -39,7 +39,7 @@ app.get(
       description: article.description,
       ogImagePath: `/images/${article.slug}.png`,
     });
-  }
+  },
 );
 
 app.get(
@@ -47,7 +47,7 @@ app.get(
   ssgParams(async () =>
     (await getArticleHeads()).map((head) => ({
       slug: head.slug,
-    }))
+    })),
   ),
   async (c) => {
     const slug = c.req.param("slug");
@@ -56,7 +56,7 @@ app.get(
 
     c.header("Content-Type", "image/png");
     return c.body(await createOGP(title));
-  }
+  },
 );
 
 app.get("/404", (c) => {

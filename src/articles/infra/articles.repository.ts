@@ -1,7 +1,8 @@
-import fs from "fs";
-import path from "path";
-import { ArticleDetail } from "../entity/articles";
+import fs from "node:fs";
+import path from "node:path";
 import matter from "gray-matter";
+import { ARTICLE_FILE_PATH } from "../../constants";
+import type { ArticleDetail } from "../entity/articles";
 
 const articlesFile = fs.readdirSync(ARTICLE_FILE_PATH);
 
@@ -25,7 +26,7 @@ const articles = await (() => {
         body: content,
       };
       return article;
-    })
+    }),
   );
 })();
 

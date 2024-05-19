@@ -4,7 +4,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "wrangler pages dev dist",
-    "deploy": "$npm_execpath run build && wrangler pages deploy dist"
+    "deploy": "$npm_execpath run build && wrangler pages deploy dist",
+    "check": "biome check ./src",
+    "check:fix" : "biome check --apply ./src"
   },
   "dependencies": {
     "@hono/react-renderer": "^0.2.0",
@@ -18,6 +20,7 @@
     "sharp": "^0.33.3"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.7.3",
     "@cloudflare/workers-types": "^4.20240403.0",
     "@hono/vite-cloudflare-pages": "^0.3.0",
     "@hono/vite-dev-server": "^0.12.0",
