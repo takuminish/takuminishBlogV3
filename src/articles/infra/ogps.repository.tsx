@@ -11,8 +11,8 @@ const createOGP = async (title: string): Promise<Buffer> => {
   );
 
   const parser = loadDefaultJapaneseParser();
-
   const wakachigakiTitle = parser.parse(title);
+
   const svg = await satori(
     <div
       style={{
