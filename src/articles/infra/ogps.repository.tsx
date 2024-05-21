@@ -3,11 +3,16 @@ import path from "node:path";
 import satori from "satori";
 import sharp from "sharp";
 import { BLOG_TITLE } from "../../constants";
+import { loadDefaultJapaneseParser } from "budoux";
 
 const createOGP = async (title: string): Promise<Buffer> => {
   const robotoArrayBuffer = await fs.readFile(
-    path.resolve(path.join("font"), "NotoSansJP-Bold.ttf"),
+    path.resolve(path.join("font"), "NotoSansJP-Bold.ttf")
   );
+
+  const parser = loadDefaultJapaneseParser();
+
+  const wakachigakiTitle = parser.parse(title);
   const svg = await satori(
     <div
       style={{
@@ -38,9 +43,15 @@ const createOGP = async (title: string): Promise<Buffer> => {
           style={{
             fontSize: "50px",
             fontWeight: 700,
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            width: "70%",
           }}
         >
-          {title}
+          {wakachigakiTitle.map((word) => (
+            <span style={{ display: "block" }}>{word}</span>
+          ))}
         </span>
         <span
           style={{
@@ -64,7 +75,7 @@ const createOGP = async (title: string): Promise<Buffer> => {
           style: "normal",
         },
       ],
-    },
+    }
   );
 
   return sharp(Buffer.from(svg)).png().toBuffer();
