@@ -1,6 +1,6 @@
 import type { ArticleDetail, ArticleHead } from "./entity/articles";
-import { getArticles } from "./infra/articles.repository";
-import createOGPFn from "./infra/ogps.repository";
+import { getArticles } from "@/articles/infra/articles.repository";
+import createOGPFn from "@/articles/infra/ogps.repository";
 
 export function getArticleHeads(): ArticleHead[] {
   return getArticleDetails().map((article) => ({

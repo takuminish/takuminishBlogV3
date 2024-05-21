@@ -6,7 +6,7 @@ import {
   LinkOverlay,
   Text,
 } from "@yamada-ui/react";
-import type { ArticleHead } from "../../articles/entity/articles";
+import type { ArticleHead } from "@/articles/entity/articles";
 
 type Props = {
   articles: ArticleHead[];

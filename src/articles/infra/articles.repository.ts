@@ -1,8 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
-import { ARTICLE_FILE_PATH } from "../../constants";
-import type { ArticleDetail } from "../entity/articles";
+import { ARTICLE_FILE_PATH } from "@/constants";
+import type { ArticleDetail } from "@/articles//entity/articles";
 
 const articlesFile = fs.readdirSync(ARTICLE_FILE_PATH);
 

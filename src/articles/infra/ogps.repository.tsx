@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import satori from "satori";
 import sharp from "sharp";
-import { BLOG_TITLE } from "../../constants";
+import { BLOG_TITLE } from "@/constants";
 
 const createOGP = async (title: string): Promise<Buffer> => {
   const robotoArrayBuffer = await fs.readFile(
