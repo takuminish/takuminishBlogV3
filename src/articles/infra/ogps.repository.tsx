@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import satori from "satori";
 import sharp from "sharp";
-import { BLOG_TITLE } from "../../constants";
+import { BLOG_TITLE } from "@/constants";
 import { loadDefaultJapaneseParser } from "budoux";
 
 const createOGP = async (title: string): Promise<Buffer> => {

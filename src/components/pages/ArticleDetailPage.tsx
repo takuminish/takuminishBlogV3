@@ -1,6 +1,6 @@
 import { Markdown } from "@yamada-ui/markdown";
 import { Box, Center, Heading } from "@yamada-ui/react";
-import type { ArticleDetail } from "../../articles/entity/articles";
+import type { ArticleDetail } from "@/articles/entity/articles";
 
 type Props = {
   article: ArticleDetail;
