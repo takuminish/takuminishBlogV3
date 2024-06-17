@@ -1,0 +1,22 @@
+name: Lint
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Checkout
+       uses: actions/checkout@v4
+       
+     - name: setup Node
+       uses: actions/setup-node@v3
+       with:
+         node-version: "18"
+
+     - name: dependencies install
+       run: npm run ci
+       
+     - name: test
+       run: npm run check
+  
