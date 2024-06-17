@@ -1,13 +1,13 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import satori from "satori";
-import sharp from "sharp";
 import { BLOG_TITLE } from "@/constants";
 import { loadDefaultJapaneseParser } from "budoux";
+import satori from "satori";
+import sharp from "sharp";
 
 const createOGP = async (title: string): Promise<Buffer> => {
   const robotoArrayBuffer = await fs.readFile(
-    path.resolve(path.join("font"), "NotoSansJP-Bold.ttf")
+    path.resolve(path.join("font"), "NotoSansJP-Bold.ttf"),
   );
 
   const parser = loadDefaultJapaneseParser();
@@ -50,7 +50,9 @@ const createOGP = async (title: string): Promise<Buffer> => {
           }}
         >
           {wakachigakiTitle.map((word) => (
-            <span style={{ display: "block" }}>{word}</span>
+            <span key={word} style={{ display: "block" }}>
+              {word}
+            </span>
           ))}
         </span>
         <span
@@ -75,7 +77,7 @@ const createOGP = async (title: string): Promise<Buffer> => {
           style: "normal",
         },
       ],
-    }
+    },
   );
 
   return sharp(Buffer.from(svg)).png().toBuffer();

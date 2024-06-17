@@ -1,3 +1,7 @@
+import ArticleDetailPage from "@/components/pages/ArticleDetailPage";
+import ArticleIndexPage from "@/components/pages/ArticleIndexPage";
+import NotFoundPage from "@/components/pages/NotFoundPage";
+import { renderer } from "@/renderer";
 import { Hono } from "hono";
 import { ssgParams } from "hono/ssg";
 import {
@@ -5,10 +9,6 @@ import {
   getArticleDetailBySlug,
   getArticleHeads,
 } from "./articles/articles";
-import ArticleDetailPage from "@/components/pages/ArticleDetailPage";
-import ArticleIndexPage from "@/components/pages/ArticleIndexPage";
-import NotFoundPage from "@/components/pages/NotFoundPage";
-import { renderer } from "@/renderer";
 
 const app = new Hono();
 

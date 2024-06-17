@@ -1,8 +1,8 @@
-import { reactRenderer } from "@hono/react-renderer";
-import { Flex, UIProvider } from "@yamada-ui/react";
 import BlogBody from "@/components/shared/BlogBody";
 import Footer from "@/components/shared/Footer";
 import { BLOG_TITLE, BLOG_URL } from "@/constants";
+import { reactRenderer } from "@hono/react-renderer";
+import { Flex, UIProvider } from "@yamada-ui/react";
 
 export const renderer = reactRenderer(
   ({ children, title, description, ogImagePath }) => {
