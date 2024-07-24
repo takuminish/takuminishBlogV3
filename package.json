@@ -6,7 +6,9 @@
     "preview": "wrangler pages dev dist",
     "deploy": "$npm_execpath run build && wrangler pages deploy dist",
     "check": "biome check ./src",
-    "check:fix": "biome check --apply ./src"
+    "check:fix": "biome check --apply ./src",
+    "check:article:markdown": "markdownlint 'content/articles/*.md'",
+    "check:article:text": "textlint content/articles/**"
   },
   "dependencies": {
     "@hono/react-renderer": "0.2.0",
@@ -29,6 +31,9 @@
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",
     "gray-matter": "4.0.3",
+    "markdownlint-cli": "0.41.0",
+    "textlint": "14.0.4",
+    "textlint-rule-preset-ja-technical-writing": "10.0.1",
     "vite": "5.2.10",
     "wrangler": "3.47.0"
   }
