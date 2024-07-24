@@ -11,7 +11,7 @@ description: "このブログはhonoのSSGで構築しており、CloudflarePage
 
 # project の作成
 
-- https://hono.dev/getting-started/cloudflare-pages の通りに進めます。
+- https://hono.dev/getting-started/cloudflare-pages の通りに進めます
 
 今回は、package manager に npm を選択しています。
 
