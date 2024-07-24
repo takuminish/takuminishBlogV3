@@ -25,7 +25,7 @@ $ npm create hono@latest
 ⠏ Installing project dependencies
 ```
 
-すると、以下のディレクトリ構成が自動で生成されます。
+すると、以下のディレクトリ構成が自動で生成されます
 
 ```bash
 ./
