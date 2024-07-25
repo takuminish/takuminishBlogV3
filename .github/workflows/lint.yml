@@ -14,9 +14,11 @@ jobs:
        with:
          node-version: "18"
 
+     - uses: pnpm/action-setup@v4
+
      - name: dependencies install
-       run: npm ci
+       run: pnpm install --frozen-lockfile
        
      - name: test
-       run: npm run check
+       run: pnpm run check
   
