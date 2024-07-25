@@ -18,6 +18,7 @@ jobs:
           github_token: ${{ secrets.REVIEWDOG_TOKEN }}
           reporter: github-pr-review
           textlint_flags: "content/articles/**"
+          package_manager: "pnpm"
 
       - name: markdownlint
         uses: reviewdog/action-markdownlint@v0
