@@ -8,7 +8,8 @@
     "check": "biome check ./src",
     "check:fix": "biome check --apply ./src",
     "check:article:markdown": "markdownlint 'content/articles/*.md'",
-    "check:article:text": "textlint content/articles/**"
+    "check:article:text": "textlint content/articles/**",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@hono/react-renderer": "0.2.0",
