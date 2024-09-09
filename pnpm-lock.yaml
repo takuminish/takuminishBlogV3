@@ -49,8 +49,8 @@ importers:
         specifier: 0.4.2
         version: 0.4.2(hono@4.5.1)
       '@hono/vite-dev-server':
-        specifier: 0.12.0
-        version: 0.12.0(hono@4.5.1)
+        specifier: 0.16.0
+        version: 0.16.0(hono@4.5.1)(miniflare@3.20240718.0)(wrangler@3.47.0(@cloudflare/workers-types@4.20240403.0))
       '@hono/vite-ssg':
         specifier: 0.1.0
         version: 0.1.0(hono@4.5.1)
@@ -654,11 +654,18 @@ packages:
     peerDependencies:
       hono: '*'
 
-  '@hono/vite-dev-server@0.12.0':
-    resolution: {integrity: sha512-FJIMuTNfJaL7VjktNfqthFMqRyasXPgeMrS2wKKkDEzaLhlRmllC0bajPGrwH+xRQsTJxD/y6ttjg0x6dJeoMw==}
+  '@hono/vite-dev-server@0.16.0':
+    resolution: {integrity: sha512-zGPaYY7DyDr33id677fUuaPiV2qQJoPrxv+nrcLc7g8M9PkcvlV8kO2XRkrwZT64rUSBxyWOuGN3vEIFiH9l0w==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '*'
+      miniflare: '*'
+      wrangler: '*'
+    peerDependenciesMeta:
+      miniflare:
+        optional: true
+      wrangler:
+        optional: true
 
   '@hono/vite-ssg@0.1.0':
     resolution: {integrity: sha512-tnkBilZ2/+y8w/X+R2Pf4Heu+Xyk4wO2KiBiEOvqqiXQC2yT8WAdiB17qk87og3ZuRCC/721ZZ736TpB6fGkWQ==}
@@ -4431,16 +4438,14 @@ snapshots:
     dependencies:
       hono: 4.5.1
 
-  '@hono/vite-dev-server@0.12.0(hono@4.5.1)':
+  '@hono/vite-dev-server@0.16.0(hono@4.5.1)(miniflare@3.20240718.0)(wrangler@3.47.0(@cloudflare/workers-types@4.20240403.0))':
     dependencies:
       '@hono/node-server': 1.12.0
       hono: 4.5.1
-      miniflare: 3.20240718.0
       minimatch: 9.0.5
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
+    optionalDependencies:
+      miniflare: 3.20240718.0
+      wrangler: 3.47.0(@cloudflare/workers-types@4.20240403.0)
 
   '@hono/vite-ssg@0.1.0(hono@4.5.1)':
     dependencies:
@@ -7903,6 +7908,7 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
+    optional: true
 
   minimatch@3.1.2:
     dependencies:
@@ -9207,6 +9213,7 @@ snapshots:
       '@cloudflare/workerd-linux-64': 1.20240718.0
       '@cloudflare/workerd-linux-arm64': 1.20240718.0
       '@cloudflare/workerd-windows-64': 1.20240718.0
+    optional: true
 
   wrangler@3.47.0(@cloudflare/workers-types@4.20240403.0):
     dependencies:
