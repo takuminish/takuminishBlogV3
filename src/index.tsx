@@ -1,9 +1,9 @@
+import articleApp from "@/articles/articles.controller";
 import ArticleIndexPage from "@/components/pages/ArticleIndexPage";
 import NotFoundPage from "@/components/pages/NotFoundPage";
 import { renderer } from "@/renderer";
-import { Hono } from "hono";
-import articleApp from "@/articles/articles.controller";
 import scrapApp from "@/scraps/scraps.controller";
+import { Hono } from "hono";
 import { getArticleHeads } from "./articles/articles.service";
 import TopPage from "./components/pages/TopPage";
 import { getScrapHeads } from "./scraps/scraps.service";
@@ -33,6 +33,5 @@ app.get("/404", (c) => {
 
 app.route("/articles", articleApp);
 app.route("/scraps", scrapApp);
-
 
 export default app;

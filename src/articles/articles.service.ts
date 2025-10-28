@@ -3,14 +3,14 @@ import createOGPFn from "@/ogp/infra/ogps.repository";
 import type { ArticleDetail, ArticleHead } from "./entity/articles";
 
 export function getArticleHeads(order?: number): ArticleHead[] {
-  const heads =  getArticleDetails().map((article) => ({
+  const heads = getArticleDetails().map((article) => ({
     slug: article.slug,
     title: article.title,
     date: article.date,
     description: article.description,
   }));
 
-  if(!order) {
+  if (!order) {
     return heads;
   }
 

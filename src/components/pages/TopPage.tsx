@@ -1,4 +1,4 @@
-import { ArticleHead } from "@/articles/entity/articles";
+import type { ArticleHead } from "@/articles/entity/articles";
 import type { ScrapHead } from "@/scraps/entity/scrap";
 import {
   Box,
@@ -77,7 +77,7 @@ function TopPage(props: Props) {
       <Box>
         <Heading>トップ</Heading>
       </Box>
-       <Flex gap="md" direction="column">
+      <Flex gap="md" direction="column">
         {articleContents}
       </Flex>
       <Box>

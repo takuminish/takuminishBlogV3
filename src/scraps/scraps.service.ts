@@ -8,9 +8,9 @@ export function getScrapHeads(order?: number): ScrapHead[] {
     date: scrap.date,
   }));
 
-  if(!order) {
+  if (!order) {
     return heads;
-  } 
+  }
 
   return heads.slice(0, order);
 }

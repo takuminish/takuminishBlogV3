@@ -1,11 +1,11 @@
 import NotFoundPage from "@/components/pages/NotFoundPage";
+import ScrapDetailPage from "@/components/pages/ScrapDetailPage";
+import ScrapIndexPage from "@/components/pages/ScrapIndexPage";
+import { createOGP } from "@/ogp/ogp";
 import { renderer } from "@/renderer";
 import { Hono } from "hono";
 import { ssgParams } from "hono/ssg";
 import { getScrapDetailBySlug, getScrapHeads } from "./scraps.service";
-import { createOGP } from "@/ogp/ogp";
-import ScrapIndexPage from "@/components/pages/ScrapIndexPage";
-import ScrapDetailPage from "@/components/pages/ScrapDetailPage";
 
 const app = new Hono();
 

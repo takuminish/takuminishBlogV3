@@ -1,4 +1,4 @@
-import { ScrapDetail } from "@/scraps/entity/scrap";
+import type { ScrapDetail } from "@/scraps/entity/scrap";
 import { Markdown } from "@yamada-ui/markdown";
 import { Box, Center, Heading } from "@yamada-ui/react";
 

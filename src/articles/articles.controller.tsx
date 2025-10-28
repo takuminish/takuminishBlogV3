@@ -1,11 +1,11 @@
 import ArticleDetailPage from "@/components/pages/ArticleDetailPage";
 import ArticleIndexPage from "@/components/pages/ArticleIndexPage";
 import NotFoundPage from "@/components/pages/NotFoundPage";
+import { createOGP } from "@/ogp/ogp";
 import { renderer } from "@/renderer";
 import { Hono } from "hono";
 import { ssgParams } from "hono/ssg";
 import { getArticleDetailBySlug, getArticleHeads } from "./articles.service";
-import { createOGP } from "@/ogp/ogp";
 
 const app = new Hono();
 
