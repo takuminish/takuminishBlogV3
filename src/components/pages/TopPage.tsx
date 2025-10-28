@@ -1,15 +1,8 @@
 import type { ArticleHead } from "@/articles/entity/articles";
-import type { ScrapHead } from "@/scraps/entity/scrap";
 import ArticleCard from "@/components/shared/ArticleCard";
 import ScrapCard from "@/components/shared/ScrapCard";
-import {
-  Box,
-  Flex,
-  Grid,
-  Heading,
-  Link,
-  Stack,
-} from "@yamada-ui/react";
+import type { ScrapHead } from "@/scraps/entity/scrap";
+import { Box, Flex, Grid, Heading, Link, Stack } from "@yamada-ui/react";
 
 type Props = {
   articles: ArticleHead[];

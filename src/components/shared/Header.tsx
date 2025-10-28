@@ -1,9 +1,4 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Link,
-} from "@yamada-ui/react";
+import { Box, Flex, Heading, Link } from "@yamada-ui/react";
 
 function Header() {
   return (
@@ -28,10 +23,7 @@ function Header() {
         align="center"
         justify="space-between"
       >
-        <Link
-          href="/"
-          _hover={{ textDecoration: "none" }}
-        >
+        <Link href="/" _hover={{ textDecoration: "none" }}>
           <Heading
             size="lg"
             color="gray.800"
@@ -50,7 +42,7 @@ function Header() {
             _hover={{ color: "blue.600" }}
             _dark={{
               color: "gray.300",
-              _hover: { color: "blue.400" }
+              _hover: { color: "blue.400" },
             }}
           >
             記事
@@ -63,7 +55,7 @@ function Header() {
             _hover={{ color: "orange.600" }}
             _dark={{
               color: "gray.300",
-              _hover: { color: "orange.400" }
+              _hover: { color: "orange.400" },
             }}
           >
             スクラップ

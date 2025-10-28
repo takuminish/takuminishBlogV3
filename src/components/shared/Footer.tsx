@@ -14,11 +14,7 @@ function Footer() {
         bg: "gray.900",
       }}
     >
-      <Text
-        fontSize="sm"
-        color="gray.600"
-        _dark={{ color: "gray.400" }}
-      >
+      <Text fontSize="sm" color="gray.600" _dark={{ color: "gray.400" }}>
         © 2024 Blog. All rights reserved.
       </Text>
     </Box>

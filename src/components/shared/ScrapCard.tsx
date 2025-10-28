@@ -1,10 +1,4 @@
-import {
-  Box,
-  Heading,
-  LinkBox,
-  LinkOverlay,
-  Text,
-} from "@yamada-ui/react";
+import { Box, Heading, LinkBox, LinkOverlay, Text } from "@yamada-ui/react";
 
 type Props = {
   title: string;
@@ -33,8 +27,14 @@ function ScrapCard(props: Props) {
     { bg: "#e2e3e5", border: "#d6d8db", shadow: "#a29bfe" },
   ];
 
-  const rotations = ["rotate(-2deg)", "rotate(1deg)", "rotate(-1deg)", "rotate(2deg)", "rotate(0deg)"];
-  
+  const rotations = [
+    "rotate(-2deg)",
+    "rotate(1deg)",
+    "rotate(-1deg)",
+    "rotate(2deg)",
+    "rotate(0deg)",
+  ];
+
   const colorIndex = index % colors.length;
   const rotationIndex = index % rotations.length;
   const selectedColor = colors[colorIndex];
@@ -83,7 +83,7 @@ function ScrapCard(props: Props) {
       cursor="pointer"
     >
       <LinkOverlay href={href} />
-      
+
       <Box pt="md">
         <Heading
           size="md"
@@ -95,7 +95,7 @@ function ScrapCard(props: Props) {
         >
           {title}
         </Heading>
-        
+
         <Text
           fontSize="xs"
           color="gray.600"

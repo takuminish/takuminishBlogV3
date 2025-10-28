@@ -1,10 +1,6 @@
-import type { ScrapHead } from "@/scraps/entity/scrap";
 import ScrapCard from "@/components/shared/ScrapCard";
-import {
-  Box,
-  Grid,
-  Heading,
-} from "@yamada-ui/react";
+import type { ScrapHead } from "@/scraps/entity/scrap";
+import { Box, Grid, Heading } from "@yamada-ui/react";
 
 type Props = {
   scraps: ScrapHead[];

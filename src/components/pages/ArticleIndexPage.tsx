@@ -1,10 +1,6 @@
 import type { ArticleHead } from "@/articles/entity/articles";
 import ArticleCard from "@/components/shared/ArticleCard";
-import {
-  Box,
-  Heading,
-  Stack,
-} from "@yamada-ui/react";
+import { Box, Heading, Stack } from "@yamada-ui/react";
 
 type Props = {
   articles: ArticleHead[];

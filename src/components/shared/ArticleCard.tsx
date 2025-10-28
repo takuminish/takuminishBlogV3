@@ -1,10 +1,4 @@
-import {
-  Box,
-  Heading,
-  LinkBox,
-  LinkOverlay,
-  Text,
-} from "@yamada-ui/react";
+import { Box, Heading, LinkBox, LinkOverlay, Text } from "@yamada-ui/react";
 
 type Props = {
   title: string;
@@ -64,11 +58,7 @@ function ArticleCard(props: Props) {
           {description}
         </Text>
       )}
-      <Text
-        fontSize="sm"
-        color="gray.500"
-        _dark={{ color: "gray.400" }}
-      >
+      <Text fontSize="sm" color="gray.500" _dark={{ color: "gray.400" }}>
         {formatDate(date)}
       </Text>
     </LinkBox>

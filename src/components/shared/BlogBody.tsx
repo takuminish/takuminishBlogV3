@@ -11,14 +11,7 @@ function BlogBody(props: Props) {
   return (
     <VStack gap={0} minH="100vh">
       <Header />
-      <Box 
-        as="main" 
-        w="full" 
-        maxW="1024px" 
-        mx="auto" 
-        p="2rem" 
-        flex="1"
-      >
+      <Box as="main" w="full" maxW="1024px" mx="auto" p="2rem" flex="1">
         {children}
       </Box>
     </VStack>

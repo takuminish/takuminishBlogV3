@@ -19,7 +19,13 @@ function ArticleDetailPage(props: Props) {
 
   return (
     <Stack gap="xl" maxW="800px" mx="auto">
-      <Box textAlign="center" py="xl" borderBottom="1px solid" borderColor="gray.200" _dark={{ borderColor: "gray.700" }}>
+      <Box
+        textAlign="center"
+        py="xl"
+        borderBottom="1px solid"
+        borderColor="gray.200"
+        _dark={{ borderColor: "gray.700" }}
+      >
         <Heading
           size="3xl"
           color="gray.800"
@@ -40,15 +46,11 @@ function ArticleDetailPage(props: Props) {
             {article.description}
           </Text>
         )}
-        <Text
-          fontSize="sm"
-          color="gray.500"
-          _dark={{ color: "gray.400" }}
-        >
+        <Text fontSize="sm" color="gray.500" _dark={{ color: "gray.400" }}>
           {formatDate(article.date)}
         </Text>
       </Box>
-      
+
       <Box py="lg">
         <Markdown>{article.body}</Markdown>
       </Box>
