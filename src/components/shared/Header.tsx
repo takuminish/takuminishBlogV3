@@ -30,7 +30,7 @@ function Header() {
             fontWeight="700"
             _dark={{ color: "gray.100" }}
           >
-            Blog
+            Takuminish's Blog
           </Heading>
         </Link>
 
