@@ -1,14 +1,20 @@
 import { getArticles } from "@/articles/infra/articles.repository";
-import createOGPFn from "@/articles/infra/ogps.repository";
+import createOGPFn from "@/ogp/infra/ogps.repository";
 import type { ArticleDetail, ArticleHead } from "./entity/articles";
 
-export function getArticleHeads(): ArticleHead[] {
-  return getArticleDetails().map((article) => ({
+export function getArticleHeads(order?: number): ArticleHead[] {
+  const heads = getArticleDetails().map((article) => ({
     slug: article.slug,
     title: article.title,
     date: article.date,
     description: article.description,
   }));
+
+  if (!order) {
+    return heads;
+  }
+
+  return heads.slice(0, order);
 }
 
 export function getArticleDetailBySlug(slug: string): ArticleDetail {
@@ -23,8 +29,4 @@ export function getArticleDetailBySlug(slug: string): ArticleDetail {
 
 export function getArticleDetails(): ArticleDetail[] {
   return getArticles();
-}
-
-export function createOGP(title: string): Promise<Buffer> {
-  return createOGPFn(title);
 }
