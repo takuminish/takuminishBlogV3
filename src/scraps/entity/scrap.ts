@@ -7,5 +7,6 @@ export type ScrapDetail = {
 
 export type ScrapHead = {
   slug: string;
+  date: Date;
   title: string;
 };

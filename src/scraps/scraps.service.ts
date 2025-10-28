@@ -13,7 +13,7 @@ export function getScrapDetailBySlug(slug: string): ScrapDetail {
   const scrap = getScrapDetails().find((scrap) => slug === scrap.slug);
 
   if (!scrap) {
-    throw new Error(`article not found(slug = ${slug}`);
+    throw new Error(`scrap not found(slug = ${slug}`);
   }
 
   return scrap;
