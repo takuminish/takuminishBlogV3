@@ -5,17 +5,20 @@ import { Hono } from "hono";
 import articleApp from "@/articles/articles.controller";
 import scrapApp from "@/scraps/scraps.controller";
 import { getArticleHeads } from "./articles/articles.service";
+import TopPage from "./components/pages/TopPage";
+import { getScrapHeads } from "./scraps/scraps.service";
 
 const app = new Hono();
 
 app.use(renderer);
 
 app.get("/", (c) => {
-  const articles = getArticleHeads();
+  const articles = getArticleHeads(10);
+  const scraps = getScrapHeads(10);
 
-  return c.render(<ArticleIndexPage articles={articles} />, {
-    title: "記事一覧",
-    description: "記事一覧です。",
+  return c.render(<TopPage articles={articles} scraps={scraps} />, {
+    title: "トップページ",
+    description: "トップページです。",
     ogImagePath: "",
   });
 });
