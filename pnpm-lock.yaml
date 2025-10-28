@@ -52,8 +52,8 @@ importers:
         specifier: 0.12.0
         version: 0.12.0(hono@4.5.1)
       '@hono/vite-ssg':
-        specifier: 0.1.0
-        version: 0.1.0(hono@4.5.1)
+        specifier: 0.3.0
+        version: 0.3.0(hono@4.5.1)
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
@@ -685,11 +685,11 @@ packages:
     peerDependencies:
       hono: '*'
 
-  '@hono/vite-ssg@0.1.0':
-    resolution: {integrity: sha512-tnkBilZ2/+y8w/X+R2Pf4Heu+Xyk4wO2KiBiEOvqqiXQC2yT8WAdiB17qk87og3ZuRCC/721ZZ736TpB6fGkWQ==}
+  '@hono/vite-ssg@0.3.0':
+    resolution: {integrity: sha512-JFqLVPOwKBIgDJo4+tWoVH+zkg6ftLdJSntQ67eJUaBVhxZtISpPQv9jQ0G91Tqm+8C5O46sMVIa6ygtHf4CEg==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
-      hono: '>=4.0.0'
+      hono: '>=4.8.0'
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -4716,7 +4716,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@hono/vite-ssg@0.1.0(hono@4.5.1)':
+  '@hono/vite-ssg@0.3.0(hono@4.5.1)':
     dependencies:
       hono: 4.5.1
 
