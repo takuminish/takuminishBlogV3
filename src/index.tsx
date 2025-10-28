@@ -4,11 +4,8 @@ import NotFoundPage from "@/components/pages/NotFoundPage";
 import { renderer } from "@/renderer";
 import { Hono } from "hono";
 import { ssgParams } from "hono/ssg";
-import {
-  createOGP,
-  getArticleDetailBySlug,
-  getArticleHeads,
-} from "./articles/articles";
+import { getArticleDetailBySlug, getArticleHeads } from "./articles/articles";
+import { createOGP } from "./ogp/ogp";
 
 const app = new Hono();
 

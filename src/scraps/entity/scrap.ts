@@ -3,7 +3,6 @@ export type ScrapDetail = {
   title: string;
   date: Date;
   body: string;
-  linkedArticles: string[];
 };
 
 export type ScrapHead = {

@@ -5,7 +5,7 @@ import { loadDefaultJapaneseParser } from "budoux";
 import satori from "satori";
 import sharp from "sharp";
 
-const createOGP = async (title: string): Promise<Buffer> => {
+const createOGP = async (title: string): Promise<ArrayBuffer> => {
   const robotoArrayBuffer = await fs.readFile(
     path.resolve(path.join("font"), "NotoSansJP-Bold.ttf"),
   );
@@ -80,7 +80,7 @@ const createOGP = async (title: string): Promise<Buffer> => {
     },
   );
 
-  return sharp(Buffer.from(svg)).png().toBuffer();
+  return new Uint8Array(await sharp(Buffer.from(svg)).png().toBuffer()).buffer;
 };
 
 export default createOGP;
