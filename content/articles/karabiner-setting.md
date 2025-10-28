@@ -14,7 +14,7 @@ karabinerをしようすることで、矢印キーをvimのhjklにマッピン�
 -  option + hjkl to mouse move, option + ui to left click, right click
  
 ## Left ctrl + hjkl to arrow keys Vim
-2023年より、vimを使用するようになりhjklによる操作にも慣れてきたので、vim以外の他のアプリでもhjklでカーソルを移動させたいと思ったのが、理由です。また、同時期にキーボードをHHKBに変更しており、物理的な矢印キーがなくなったのも理由の一つです。
+2023年より、vimを使用するようになりhjklによる操作にも慣れてきたので、vim以外の他のアプリでもhjklでカーソルを移動させたいと思ったのが、理由です。また、同時期にキーボードをHHKBに変更しており、物理的な矢印キーがなくなったのも理由の1つです。
 
 https://ke-complex-modifications.pqrs.org/?q=vim の検索結果からimportします。
 
