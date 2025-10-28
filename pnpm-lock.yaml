@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@hono/react-renderer':
-        specifier: 0.2.0
-        version: 0.2.0(hono@4.5.1)
+        specifier: 1.0.1
+        version: 1.0.1(hono@4.5.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@yamada-ui/fontawesome':
         specifier: 1.0.34
         version: 1.0.34(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -684,11 +684,13 @@ packages:
     resolution: {integrity: sha512-e6oHjNiErRxsZRZBmc2KucuvY3btlO/XPncIpP2X75bRdTilF9GLjm3NHvKKunpJbbJJj31/FoPTksTf8djAVw==}
     engines: {node: '>=18.14.1'}
 
-  '@hono/react-renderer@0.2.0':
-    resolution: {integrity: sha512-DGobhlEOfnD3iziSLnZIjY32IBGJay64E/QbphjKx32ldawNe3YVT/88GhtmqowPia+GJrtdrSP9BSCl6r3JPw==}
+  '@hono/react-renderer@1.0.1':
+    resolution: {integrity: sha512-vjQ/70hVrbgsi2O44N7w5sO0v51lRcuXau/4caVzw0A1hje+U2zAnuhiBC3JhX56gGfhGT4kO5B0di4SROx0Lg==}
     engines: {node: '>=18'}
     peerDependencies:
       hono: '*'
+      react: ^19.0.0
+      react-dom: ^19.0.0
 
   '@hono/vite-cloudflare-pages@0.4.2':
     resolution: {integrity: sha512-fvSmWNtL7rMTa6tfj0dJNu0UStp8veb2r1BfutoKtJ6GaTzO1sR5ElQw9jIYo46oTBcx8+i/9+NzyGR56awtrQ==}
@@ -4736,9 +4738,11 @@ snapshots:
 
   '@hono/node-server@1.12.0': {}
 
-  '@hono/react-renderer@0.2.0(hono@4.5.1)':
+  '@hono/react-renderer@1.0.1(hono@4.5.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       hono: 4.5.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   '@hono/vite-cloudflare-pages@0.4.2(hono@4.5.1)':
     dependencies:
