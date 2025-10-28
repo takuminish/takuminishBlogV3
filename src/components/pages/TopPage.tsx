@@ -1,9 +1,11 @@
 import type { ArticleHead } from "@/articles/entity/articles";
 import type { ScrapHead } from "@/scraps/entity/scrap";
 import ArticleCard from "@/components/shared/ArticleCard";
+import ScrapCard from "@/components/shared/ScrapCard";
 import {
   Box,
   Flex,
+  Grid,
   Heading,
   Link,
   Stack,
@@ -69,30 +71,40 @@ function TopPage(props: Props) {
             size="xl"
             color="gray.700"
             fontWeight="600"
+            fontFamily="'Comic Sans MS', cursive, sans-serif"
             _dark={{ color: "gray.200" }}
           >
-            最新のスクラップ
+            📝 最新のスクラップ
           </Heading>
           <Link
             href="/scraps"
-            color="blue.600"
+            color="orange.600"
             fontWeight="500"
-            _hover={{ color: "blue.700" }}
-            _dark={{ color: "blue.400", _hover: { color: "blue.300" } }}
+            _hover={{ color: "orange.700" }}
+            _dark={{ color: "orange.400", _hover: { color: "orange.300" } }}
           >
-            すべて見る
+            もっと見る
           </Link>
         </Flex>
-        <Stack gap="md">
-          {scraps.map((scrap) => (
-            <ArticleCard
+        <Grid
+          templateColumns={{
+            base: "1fr",
+            md: "repeat(2, 1fr)",
+            lg: "repeat(3, 1fr)",
+          }}
+          gap="md"
+          placeItems="center"
+        >
+          {scraps.slice(0, 6).map((scrap, index) => (
+            <ScrapCard
               key={scrap.slug}
               title={scrap.title}
               date={scrap.date}
               href={generateScrapUrl(scrap.slug)}
+              index={index}
             />
           ))}
-        </Stack>
+        </Grid>
       </Box>
     </Stack>
   );
