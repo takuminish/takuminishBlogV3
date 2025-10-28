@@ -74,7 +74,7 @@ function TopPage(props: Props) {
             fontFamily="'Comic Sans MS', cursive, sans-serif"
             _dark={{ color: "gray.200" }}
           >
-            📝 最新のスクラップ
+            最新のスクラップ
           </Heading>
           <Link
             href="/scraps"

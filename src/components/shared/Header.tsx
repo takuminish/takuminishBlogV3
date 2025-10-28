@@ -66,7 +66,7 @@ function Header() {
               _hover: { color: "orange.400" }
             }}
           >
-            📝 スクラップ
+            スクラップ
           </Link>
         </Flex>
       </Flex>

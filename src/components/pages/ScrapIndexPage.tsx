@@ -23,7 +23,7 @@ function ScrapIndexPage(props: Props) {
           fontFamily="'Comic Sans MS', cursive, sans-serif"
           _dark={{ color: "gray.100" }}
         >
-          📝 スクラップボード
+          スクラップボード
         </Heading>
       </Box>
 
