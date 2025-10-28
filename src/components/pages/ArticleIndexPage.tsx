@@ -1,11 +1,9 @@
 import type { ArticleHead } from "@/articles/entity/articles";
+import ArticleCard from "@/components/shared/ArticleCard";
 import {
   Box,
-  Flex,
   Heading,
-  LinkBox,
-  LinkOverlay,
-  Text,
+  Stack,
 } from "@yamada-ui/react";
 
 type Props = {
@@ -15,43 +13,31 @@ type Props = {
 function ArticleIndexPage(props: Props) {
   const { articles } = props;
 
-  const articleContents = articles.map((article) => {
-    return (
-      <LinkBox
-        key={article.slug}
-        as="article"
-        maxW={{ base: "100%" }}
-        rounded="md"
-        p="md"
-        border="1px solid"
-        borderColor="inherit"
-        boxShadow="md"
-      >
-        <LinkOverlay href={generateArticleUrl(article.slug)} />
-        <Heading
-          bgGradient="linear(to-l, #7928CA, #FF0080)"
-          bgClip="text"
-          size="md"
-        >
-          {" "}
-          {article.title}
-        </Heading>
-
-        <Text>{article.description}</Text>
-        <Text>投稿日: {article.date.toISOString()}</Text>
-      </LinkBox>
-    );
-  });
-
   return (
-    <Flex direction="column" justifyContent="center">
-      <Box>
-        <Heading>記事一覧</Heading>
+    <Stack gap="xl" maxW="800px" mx="auto">
+      <Box textAlign="center" py="lg">
+        <Heading
+          size="2xl"
+          color="gray.800"
+          fontWeight="700"
+          _dark={{ color: "gray.100" }}
+        >
+          記事一覧
+        </Heading>
       </Box>
-      <Flex gap="md" direction="column">
-        {articleContents}
-      </Flex>
-    </Flex>
+
+      <Stack gap="md">
+        {articles.map((article) => (
+          <ArticleCard
+            key={article.slug}
+            title={article.title}
+            description={article.description}
+            date={article.date}
+            href={generateArticleUrl(article.slug)}
+          />
+        ))}
+      </Stack>
+    </Stack>
   );
 }
 

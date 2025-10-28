@@ -1,11 +1,9 @@
 import type { ScrapHead } from "@/scraps/entity/scrap";
+import ArticleCard from "@/components/shared/ArticleCard";
 import {
   Box,
-  Flex,
   Heading,
-  LinkBox,
-  LinkOverlay,
-  Text,
+  Stack,
 } from "@yamada-ui/react";
 
 type Props = {
@@ -15,41 +13,30 @@ type Props = {
 function ScrapIndexPage(props: Props) {
   const { scraps } = props;
 
-  const scrapContents = scraps.map((scrap) => {
-    return (
-      <LinkBox
-        key={scrap.slug}
-        as="article"
-        maxW={{ base: "100%" }}
-        rounded="md"
-        p="md"
-        border="1px solid"
-        borderColor="inherit"
-        boxShadow="md"
-      >
-        <LinkOverlay href={generateScrapUrl(scrap.slug)} />
-        <Heading
-          bgGradient="linear(to-l, #7928CA, #FF0080)"
-          bgClip="text"
-          size="md"
-        >
-          {" "}
-          {scrap.title}
-        </Heading>
-        <Text>投稿日: {scrap.date.toISOString()}</Text>
-      </LinkBox>
-    );
-  });
-
   return (
-    <Flex direction="column" justifyContent="center">
-      <Box>
-        <Heading>スクラップ一覧</Heading>
+    <Stack gap="xl" maxW="800px" mx="auto">
+      <Box textAlign="center" py="lg">
+        <Heading
+          size="2xl"
+          color="gray.800"
+          fontWeight="700"
+          _dark={{ color: "gray.100" }}
+        >
+          スクラップ一覧
+        </Heading>
       </Box>
-      <Flex gap="md" direction="column">
-        {scrapContents}
-      </Flex>
-    </Flex>
+
+      <Stack gap="md">
+        {scraps.map((scrap) => (
+          <ArticleCard
+            key={scrap.slug}
+            title={scrap.title}
+            date={scrap.date}
+            href={generateScrapUrl(scrap.slug)}
+          />
+        ))}
+      </Stack>
+    </Stack>
   );
 }
 
