@@ -20,7 +20,7 @@ function TopPage(props: Props) {
   const { articles, scraps } = props;
 
   return (
-    <Stack gap="xl" maxW="800px" mx="auto">
+    <Stack gap="xl">
       <Box textAlign="center" py="lg">
         <Heading
           size="2xl"
