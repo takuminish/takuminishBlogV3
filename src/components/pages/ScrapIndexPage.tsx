@@ -1,12 +1,6 @@
+import ScrapCard from "@/components/shared/ScrapCard";
 import type { ScrapHead } from "@/scraps/entity/scrap";
-import {
-  Box,
-  Flex,
-  Heading,
-  LinkBox,
-  LinkOverlay,
-  Text,
-} from "@yamada-ui/react";
+import { Box, Grid, Heading } from "@yamada-ui/react";
 
 type Props = {
   scraps: ScrapHead[];
@@ -15,41 +9,41 @@ type Props = {
 function ScrapIndexPage(props: Props) {
   const { scraps } = props;
 
-  const scrapContents = scraps.map((scrap) => {
-    return (
-      <LinkBox
-        key={scrap.slug}
-        as="article"
-        maxW={{ base: "100%" }}
-        rounded="md"
-        p="md"
-        border="1px solid"
-        borderColor="inherit"
-        boxShadow="md"
-      >
-        <LinkOverlay href={generateScrapUrl(scrap.slug)} />
-        <Heading
-          bgGradient="linear(to-l, #7928CA, #FF0080)"
-          bgClip="text"
-          size="md"
-        >
-          {" "}
-          {scrap.title}
-        </Heading>
-        <Text>投稿日: {scrap.date.toISOString()}</Text>
-      </LinkBox>
-    );
-  });
-
   return (
-    <Flex direction="column" justifyContent="center">
-      <Box>
-        <Heading>スクラップ一覧</Heading>
+    <Box maxW="1000px" mx="auto" p="lg">
+      <Box textAlign="center" py="xl" mb="lg">
+        <Heading
+          size="3xl"
+          color="gray.800"
+          fontWeight="700"
+          fontFamily="'Comic Sans MS', cursive, sans-serif"
+          _dark={{ color: "gray.100" }}
+        >
+          スクラップボード
+        </Heading>
       </Box>
-      <Flex gap="md" direction="column">
-        {scrapContents}
-      </Flex>
-    </Flex>
+
+      <Grid
+        templateColumns={{
+          base: "1fr",
+          sm: "repeat(2, 1fr)",
+          md: "repeat(3, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
+        gap="lg"
+        placeItems="center"
+      >
+        {scraps.map((scrap, index) => (
+          <ScrapCard
+            key={scrap.slug}
+            title={scrap.title}
+            date={scrap.date}
+            href={generateScrapUrl(scrap.slug)}
+            index={index}
+          />
+        ))}
+      </Grid>
+    </Box>
   );
 }
 

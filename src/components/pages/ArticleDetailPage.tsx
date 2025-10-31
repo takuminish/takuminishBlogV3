@@ -1,6 +1,6 @@
 import type { ArticleDetail } from "@/articles/entity/articles";
 import { Markdown } from "@yamada-ui/markdown";
-import { Box, Center, Heading } from "@yamada-ui/react";
+import { Box, Heading, Stack, Text } from "@yamada-ui/react";
 
 type Props = {
   article: ArticleDetail;
@@ -9,17 +9,52 @@ type Props = {
 function ArticleDetailPage(props: Props) {
   const { article } = props;
 
+  const formatDate = (date: Date): string => {
+    return date.toLocaleDateString("ja-JP", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    });
+  };
+
   return (
-    <>
-      <Box>
-        <Heading bgGradient="linear(to-l, #7928CA, #FF0080)" bgClip="text">
-          <Center>{article.title}</Center>
+    <Stack gap="xl" maxW="800px" mx="auto">
+      <Box
+        textAlign="center"
+        py="xl"
+        borderBottom="1px solid"
+        borderColor="gray.200"
+        _dark={{ borderColor: "gray.700" }}
+      >
+        <Heading
+          size="3xl"
+          color="gray.800"
+          fontWeight="700"
+          mb="md"
+          lineHeight="1.2"
+          _dark={{ color: "gray.100" }}
+        >
+          {article.title}
         </Heading>
-        <Center>{article.description}</Center>
-        <Center>投稿日: {article.date.toISOString()}</Center>
+        {article.description && (
+          <Text
+            fontSize="lg"
+            color="gray.600"
+            mb="sm"
+            _dark={{ color: "gray.300" }}
+          >
+            {article.description}
+          </Text>
+        )}
+        <Text fontSize="sm" color="gray.500" _dark={{ color: "gray.400" }}>
+          {formatDate(article.date)}
+        </Text>
       </Box>
-      <Markdown>{article.body}</Markdown>
-    </>
+
+      <Box py="lg">
+        <Markdown>{article.body}</Markdown>
+      </Box>
+    </Stack>
   );
 }
 
