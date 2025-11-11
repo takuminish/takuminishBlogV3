@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@hono/react-renderer':
-        specifier: 0.2.0
-        version: 0.2.0(hono@4.5.1)
+        specifier: 0.3.0
+        version: 0.3.0(hono@4.5.1)
       '@yamada-ui/fontawesome':
         specifier: 1.0.34
         version: 1.0.34(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -684,8 +684,8 @@ packages:
     resolution: {integrity: sha512-e6oHjNiErRxsZRZBmc2KucuvY3btlO/XPncIpP2X75bRdTilF9GLjm3NHvKKunpJbbJJj31/FoPTksTf8djAVw==}
     engines: {node: '>=18.14.1'}
 
-  '@hono/react-renderer@0.2.0':
-    resolution: {integrity: sha512-DGobhlEOfnD3iziSLnZIjY32IBGJay64E/QbphjKx32ldawNe3YVT/88GhtmqowPia+GJrtdrSP9BSCl6r3JPw==}
+  '@hono/react-renderer@0.3.0':
+    resolution: {integrity: sha512-K5g0shsuoMOT6CGfM76cdBp1Of5ucINzVEvELfeFHzC07rjYTAAiPBn6+bqeV6yOZ/ojWCye5q52C95Wi9l3XA==}
     engines: {node: '>=18'}
     peerDependencies:
       hono: '*'
@@ -4736,7 +4736,7 @@ snapshots:
 
   '@hono/node-server@1.12.0': {}
 
-  '@hono/react-renderer@0.2.0(hono@4.5.1)':
+  '@hono/react-renderer@0.3.0(hono@4.5.1)':
     dependencies:
       hono: 4.5.1
 
