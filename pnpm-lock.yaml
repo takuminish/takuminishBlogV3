@@ -12,8 +12,8 @@ importers:
         specifier: 0.2.0
         version: 0.2.0(hono@4.5.1)
       '@yamada-ui/fontawesome':
-        specifier: 1.0.34
-        version: 1.0.34(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 1.0.55
+        version: 1.0.55(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@yamada-ui/markdown':
         specifier: 1.1.4
         version: 1.1.4(@emotion/is-prop-valid@1.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -666,12 +666,12 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
-  '@fortawesome/fontawesome-common-types@6.6.0':
-    resolution: {integrity: sha512-xyX0X9mc0kyz9plIyryrRbl7ngsA9jz77mCZJsUkLl+ZKs0KWObgaEBoSgQiYWAsSmjz/yjl0F++Got0Mdp4Rw==}
+  '@fortawesome/fontawesome-common-types@6.7.2':
+    resolution: {integrity: sha512-Zs+YeHUC5fkt7Mg1l6XTniei3k4bwG/yo3iFUtZWd/pMx9g3fdvkSK9E0FOC+++phXOka78uJcYb8JaFkW52Xg==}
     engines: {node: '>=6'}
 
-  '@fortawesome/fontawesome-svg-core@6.6.0':
-    resolution: {integrity: sha512-KHwPkCk6oRT4HADE7smhfsKudt9N/9lm6EJ5BVg0tD1yPA5hht837fB87F8pn15D8JfTqQOjhKTktwmLMiD7Kg==}
+  '@fortawesome/fontawesome-svg-core@6.7.2':
+    resolution: {integrity: sha512-yxtOBWDrdi5DD5o1pmVdq3WMCvnobT0LU6R8RyyVXPvFRd2o79/0NCuQoCjNTeZz9EzA9xS3JxNWfv54RIHFEA==}
     engines: {node: '>=6'}
 
   '@fortawesome/react-fontawesome@0.2.2':
@@ -1160,11 +1160,6 @@ packages:
     peerDependencies:
       react: '>=18'
 
-  '@yamada-ui/core@1.10.0':
-    resolution: {integrity: sha512-TU2FGLwEGCAXIPsh3K8gQR6Yk0c1kFLVe4bAGTkJ5FFjgBhgK41omF2Kxj6iTDwtvwlglG3Hg8ycfm2gNRsmKQ==}
-    peerDependencies:
-      react: '>=18'
-
   '@yamada-ui/core@1.17.3':
     resolution: {integrity: sha512-vgqpIoI7D+xgDyUGigNGDGp/E3SS/gIIifp+QdQ/nu3EIT+PJ7FF/L3m5tJjMNwzalGnDuB3qIdi/6TiRK5fBg==}
     peerDependencies:
@@ -1199,8 +1194,8 @@ packages:
     peerDependencies:
       react: '>=18'
 
-  '@yamada-ui/fontawesome@1.0.34':
-    resolution: {integrity: sha512-C8Webv5163zbqOQbXVWJGFq/PV1zDxvlAOWzggIAa4t27ius02EMPHx32QM05KVD1uNxJGC2gGMa7slm6WjfCw==}
+  '@yamada-ui/fontawesome@1.0.55':
+    resolution: {integrity: sha512-Hq7ypbEVeKWirxf6BvVcohuVbVanw2b7DgfIIjUGZ+6zlAjy47O5UJrtioaLVpPvOLjBMCrA/xSqV8b18crt1g==}
     deprecated: '"This package is deprecated. Please use @yamada-ui/react instead."'
     peerDependencies:
       react: '>=18'
@@ -1219,12 +1214,6 @@ packages:
 
   '@yamada-ui/icon@1.0.25':
     resolution: {integrity: sha512-xKMa/cWpbeVjZ63jQJARQf3nfcFccJ8IWzrhBpGIyhtID0RMPlCW8L3WG7vC8AUS75kYoQT/+iqVBGGfVkf5BQ==}
-    deprecated: '"This package is deprecated. Please use @yamada-ui/react instead."'
-    peerDependencies:
-      react: '>=18'
-
-  '@yamada-ui/icon@1.1.0':
-    resolution: {integrity: sha512-H+wnbsJWXCpeidatQaNHOjxqbDIAtqavun9VrWjlfmtipPMldFyrz84lRj00UG4pGsvLCAxBpAnxnXXh/QZRLA==}
     deprecated: '"This package is deprecated. Please use @yamada-ui/react instead."'
     peerDependencies:
       react: '>=18'
@@ -1369,13 +1358,6 @@ packages:
 
   '@yamada-ui/portal@1.0.14':
     resolution: {integrity: sha512-xGMYYKQP0c/btVmmGhrUP6taNtjkMcFmTndoKoFZlE5qv4Z287Y3kBsPSLHAL/7i1WjR9evG1UWLt4kMHwNKAw==}
-    deprecated: '"This package is deprecated. Please use @yamada-ui/react instead."'
-    peerDependencies:
-      react: '>=18'
-      react-dom: '>=18'
-
-  '@yamada-ui/portal@1.0.17':
-    resolution: {integrity: sha512-oTo7oRs330poLD0MmJjlFmpXZK6jvbyuLzrkaFFNcuRAcPhKFNhfMWIfpHr3Mp3ETE5fYOTAxxz1v4NUc/86aw==}
     deprecated: '"This package is deprecated. Please use @yamada-ui/react instead."'
     peerDependencies:
       react: '>=18'
@@ -1731,12 +1713,6 @@ packages:
     peerDependencies:
       react: '>=18'
 
-  '@yamada-ui/use-token@1.1.20':
-    resolution: {integrity: sha512-gV3OdkrZ6kVfZifrCazrddYtGt2PHuDn6UXKjAe4VqNTyZTd1Xy/JUUHfzK1TDhLRQMEKo3AxTxwNGVS3V9VmA==}
-    deprecated: '"This package is deprecated. Please use @yamada-ui/react instead."'
-    peerDependencies:
-      react: '>=18'
-
   '@yamada-ui/use-token@1.1.38':
     resolution: {integrity: sha512-WhSDz0r+8cM4VjuVVHyL9smIEp5ZOknPhM8OpNGXNuQDEoSZKKacifCg7U9O7rC8JgndaWkqIIQYA4ttq/63fw==}
     deprecated: '"This package is deprecated. Please use @yamada-ui/react instead."'
@@ -1763,11 +1739,6 @@ packages:
 
   '@yamada-ui/utils@1.2.0':
     resolution: {integrity: sha512-AqebNHAcFtEJXuk1rXYMYm4RfNOdAMikAxKii6G1KEeFahtSB6sg/tFnCDJXJe6qAGtZSQLkkt7cvNSnoIBgbA==}
-    peerDependencies:
-      react: '>=18'
-
-  '@yamada-ui/utils@1.3.1':
-    resolution: {integrity: sha512-9ODq6Kvbm4OfTSXBLSUqQdRrNu0hmmFtzWjzBQdB2RU5RQO+j3MPPdBT9jYQrzaFGlYh/SoTy5FiTYI2mnpgCA==}
     peerDependencies:
       react: '>=18'
 
@@ -4722,15 +4693,15 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@fortawesome/fontawesome-common-types@6.6.0': {}
+  '@fortawesome/fontawesome-common-types@6.7.2': {}
 
-  '@fortawesome/fontawesome-svg-core@6.6.0':
+  '@fortawesome/fontawesome-svg-core@6.7.2':
     dependencies:
-      '@fortawesome/fontawesome-common-types': 6.6.0
+      '@fortawesome/fontawesome-common-types': 6.7.2
 
-  '@fortawesome/react-fontawesome@0.2.2(@fortawesome/fontawesome-svg-core@6.6.0)(react@18.3.1)':
+  '@fortawesome/react-fontawesome@0.2.2(@fortawesome/fontawesome-svg-core@6.7.2)(react@18.3.1)':
     dependencies:
-      '@fortawesome/fontawesome-svg-core': 6.6.0
+      '@fortawesome/fontawesome-svg-core': 6.7.2
       prop-types: 15.8.1
       react: 18.3.1
 
@@ -5358,22 +5329,6 @@ snapshots:
       - react-dom
       - supports-color
 
-  '@yamada-ui/core@1.10.0(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@emotion/css': 11.13.0
-      '@emotion/react': 11.13.0(@types/react@18.3.3)(react@18.3.1)
-      '@emotion/sheet': 1.4.0
-      '@emotion/styled': 11.13.0(@emotion/react@11.13.0(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
-      '@yamada-ui/portal': 1.0.17(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@yamada-ui/utils': 1.3.1(react@18.3.1)
-      csstype: 3.1.3
-      react: 18.3.1
-      react-fast-compare: 3.2.2
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-      - supports-color
-
   '@yamada-ui/core@1.17.3(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@emotion/css': 11.11.0
@@ -5451,13 +5406,13 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@yamada-ui/fontawesome@1.0.34(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@yamada-ui/fontawesome@1.0.55(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@fortawesome/fontawesome-svg-core': 6.6.0
-      '@fortawesome/react-fontawesome': 0.2.2(@fortawesome/fontawesome-svg-core@6.6.0)(react@18.3.1)
-      '@yamada-ui/core': 1.10.0(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@yamada-ui/icon': 1.1.0(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@yamada-ui/utils': 1.3.1(react@18.3.1)
+      '@fortawesome/fontawesome-svg-core': 6.7.2
+      '@fortawesome/react-fontawesome': 0.2.2(@fortawesome/fontawesome-svg-core@6.7.2)(react@18.3.1)
+      '@yamada-ui/core': 1.17.3(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@yamada-ui/icon': 1.1.21(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@yamada-ui/utils': 1.7.2(react@18.3.1)
       react: 18.3.1
     transitivePeerDependencies:
       - '@types/react'
@@ -5490,17 +5445,6 @@ snapshots:
       '@yamada-ui/core': 1.6.7(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@yamada-ui/use-token': 1.1.13(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@yamada-ui/utils': 1.2.0(react@18.3.1)
-      react: 18.3.1
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-      - supports-color
-
-  '@yamada-ui/icon@1.1.0(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@yamada-ui/core': 1.10.0(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@yamada-ui/use-token': 1.1.20(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@yamada-ui/utils': 1.3.1(react@18.3.1)
       react: 18.3.1
     transitivePeerDependencies:
       - '@types/react'
@@ -5816,12 +5760,6 @@ snapshots:
   '@yamada-ui/portal@1.0.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@yamada-ui/utils': 1.2.0(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
-  '@yamada-ui/portal@1.0.17(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@yamada-ui/utils': 1.3.1(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -6459,16 +6397,6 @@ snapshots:
       - react-dom
       - supports-color
 
-  '@yamada-ui/use-token@1.1.20(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@yamada-ui/core': 1.10.0(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@yamada-ui/utils': 1.3.1(react@18.3.1)
-      react: 18.3.1
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-      - supports-color
-
   '@yamada-ui/use-token@1.1.38(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@yamada-ui/core': 1.17.3(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -6507,11 +6435,6 @@ snapshots:
       react: 18.3.1
 
   '@yamada-ui/utils@1.2.0(react@18.3.1)':
-    dependencies:
-      color2k: 2.0.3
-      react: 18.3.1
-
-  '@yamada-ui/utils@1.3.1(react@18.3.1)':
     dependencies:
       color2k: 2.0.3
       react: 18.3.1
