@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@hono/react-renderer':
         specifier: 0.2.0
-        version: 0.2.0(hono@4.5.1)
+        version: 0.2.0(hono@4.10.6)
       '@yamada-ui/fontawesome':
         specifier: 1.0.34
         version: 1.0.34(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -24,8 +24,8 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2
       hono:
-        specifier: 4.5.1
-        version: 4.5.1
+        specifier: 4.10.6
+        version: 4.10.6
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -47,13 +47,13 @@ importers:
         version: 4.20240403.0
       '@hono/vite-cloudflare-pages':
         specifier: 0.4.2
-        version: 0.4.2(hono@4.5.1)
+        version: 0.4.2(hono@4.10.6)
       '@hono/vite-dev-server':
         specifier: 0.12.0
-        version: 0.12.0(hono@4.5.1)
+        version: 0.12.0(hono@4.10.6)
       '@hono/vite-ssg':
         specifier: 0.3.0
-        version: 0.3.0(hono@4.5.1)
+        version: 0.3.0(hono@4.10.6)
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
@@ -2492,9 +2492,9 @@ packages:
   hoist-non-react-statics@3.3.2:
     resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
 
-  hono@4.5.1:
-    resolution: {integrity: sha512-6q8AugoWG5wlrjdGG8OFFiqEsPlPGjODjUik48sEJeko4Tae1UsLS2vUiYHLEJx1gJvOZa4BWkQC+urwDmkEvQ==}
-    engines: {node: '>=16.0.0'}
+  hono@4.10.6:
+    resolution: {integrity: sha512-BIdolzGpDO9MQ4nu3AUuDwHZZ+KViNm+EZ75Ae55eMXMqLVhDFqEMXxtUe9Qh8hjL+pIna/frs2j6Y2yD5Ua/g==}
+    engines: {node: '>=16.9.0'}
 
   hosted-git-info@2.8.9:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
@@ -4736,18 +4736,18 @@ snapshots:
 
   '@hono/node-server@1.12.0': {}
 
-  '@hono/react-renderer@0.2.0(hono@4.5.1)':
+  '@hono/react-renderer@0.2.0(hono@4.10.6)':
     dependencies:
-      hono: 4.5.1
+      hono: 4.10.6
 
-  '@hono/vite-cloudflare-pages@0.4.2(hono@4.5.1)':
+  '@hono/vite-cloudflare-pages@0.4.2(hono@4.10.6)':
     dependencies:
-      hono: 4.5.1
+      hono: 4.10.6
 
-  '@hono/vite-dev-server@0.12.0(hono@4.5.1)':
+  '@hono/vite-dev-server@0.12.0(hono@4.10.6)':
     dependencies:
       '@hono/node-server': 1.12.0
-      hono: 4.5.1
+      hono: 4.10.6
       miniflare: 3.20240718.0
       minimatch: 9.0.5
     transitivePeerDependencies:
@@ -4755,9 +4755,9 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@hono/vite-ssg@0.3.0(hono@4.5.1)':
+  '@hono/vite-ssg@0.3.0(hono@4.10.6)':
     dependencies:
-      hono: 4.5.1
+      hono: 4.10.6
 
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:
@@ -7371,7 +7371,7 @@ snapshots:
     dependencies:
       react-is: 16.13.1
 
-  hono@4.5.1: {}
+  hono@4.10.6: {}
 
   hosted-git-info@2.8.9: {}
 
