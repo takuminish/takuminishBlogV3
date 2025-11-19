@@ -15,7 +15,7 @@
     "@hono/react-renderer": "0.2.0",
     "@yamada-ui/fontawesome": "1.0.34",
     "@yamada-ui/markdown": "1.1.4",
-    "@yamada-ui/react": "1.3.9",
+    "@yamada-ui/react": "1.7.8",
     "budoux": "^0.6.2",
     "hono": "4.5.1",
     "react": "18.3.1",
