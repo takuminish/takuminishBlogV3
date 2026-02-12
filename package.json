@@ -12,7 +12,7 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
-    "@hono/react-renderer": "0.2.0",
+    "@hono/react-renderer": "1.0.1",
     "@yamada-ui/fontawesome": "1.0.34",
     "@yamada-ui/markdown": "1.1.4",
     "@yamada-ui/react": "1.3.9",
