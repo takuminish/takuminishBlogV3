@@ -15,6 +15,7 @@
 |---|---|---|
 | `001-article.md` | 記事の仕様（frontmatter、データモデル、読み込み） | 採用済み |
 | `002-scrap.md` | スクラップの仕様（frontmatter、データモデル、読み込み） | 採用済み |
+| `003-book.md` | Bookの仕様（frontmatter、データモデル、読み込み、chapter構造） | 採用済み |
 
 ## system-design/
 

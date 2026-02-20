@@ -18,6 +18,14 @@
 /
 ├── content/                    # コンテンツ（Markdownファイル）
 │   ├── articles/               # 技術記事
+│   ├── books/                  # Book（複数記事を束ねるコンテンツ）
+│   │   └── {bookSlug}/
+│   │       ├── index.md        # Bookメタ情報
+│   │       ├── {articleSlug}.md # chapterなし構成の記事
+│   │       └── chapters/       # chapterあり構成
+│   │           └── {chapterSlug}/
+│   │               ├── index.md       # Chapterメタ情報
+│   │               └── {articleSlug}.md
 │   └── scraps/                 # スクラップ（メモ的な短い記事）
 ├── docs/                       # 設計書・仕様書
 │   ├── specifications/         # ツール・ライブラリの仕様書
@@ -33,6 +41,11 @@
 │   │   ├── articles.service.ts
 │   │   ├── entity/articles.ts
 │   │   └── infra/articles.repository.ts
+│   ├── books/                  # Bookドメイン
+│   │   ├── books.controller.tsx
+│   │   ├── books.service.ts
+│   │   ├── entity/books.ts
+│   │   └── infra/books.repository.ts
 │   ├── scraps/                 # スクラップドメイン
 │   │   ├── scraps.controller.tsx
 │   │   ├── scraps.service.ts

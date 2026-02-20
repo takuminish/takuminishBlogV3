@@ -10,7 +10,7 @@
 
 ## 概要
 
-各ドメイン（articles, scraps）は以下の4層で構成される。
+各ドメイン（articles, scraps, books）は以下の4層で構成される。
 
 ## レイヤー定義
 

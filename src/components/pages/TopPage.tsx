@@ -1,5 +1,7 @@
 import type { ArticleHead } from "@/articles/entity/articles";
+import type { BookHead } from "@/books/entity/books";
 import ArticleCard from "@/components/shared/ArticleCard";
+import BookCard from "@/components/shared/BookCard";
 import ScrapCard from "@/components/shared/ScrapCard";
 import type { ScrapHead } from "@/scraps/entity/scrap";
 import { Box, Flex, Grid, Heading, Link, Stack } from "@yamada-ui/react";
@@ -7,10 +9,11 @@ import { Box, Flex, Grid, Heading, Link, Stack } from "@yamada-ui/react";
 type Props = {
   articles: ArticleHead[];
   scraps: ScrapHead[];
+  books: BookHead[];
 };
 
 function TopPage(props: Props) {
-  const { articles, scraps } = props;
+  const { articles, scraps, books } = props;
 
   return (
     <Stack gap="xl">
@@ -57,6 +60,42 @@ function TopPage(props: Props) {
           ))}
         </Stack>
       </Box>
+
+      {books.length > 0 && (
+        <Box>
+          <Flex justify="space-between" align="center" mb="lg">
+            <Heading
+              size="xl"
+              color="gray.700"
+              fontWeight="600"
+              _dark={{ color: "gray.200" }}
+            >
+              最新のBook
+            </Heading>
+            <Link
+              href="/books"
+              color="blue.600"
+              fontWeight="500"
+              _hover={{ color: "blue.700" }}
+              _dark={{ color: "blue.400", _hover: { color: "blue.300" } }}
+            >
+              すべて見る
+            </Link>
+          </Flex>
+          <Stack gap="md">
+            {books.map((book) => (
+              <BookCard
+                key={book.slug}
+                title={book.title}
+                description={book.description}
+                date={book.date}
+                href={generateBookUrl(book.slug)}
+                articleCount={book.articleCount}
+              />
+            ))}
+          </Stack>
+        </Box>
+      )}
 
       <Box>
         <Flex justify="space-between" align="center" mb="lg">
@@ -105,6 +144,10 @@ function TopPage(props: Props) {
 
 function generateArticleUrl(slug: string): string {
   return `articles/${slug}`;
+}
+
+function generateBookUrl(slug: string): string {
+  return `books/${slug}`;
 }
 
 function generateScrapUrl(slug: string): string {
