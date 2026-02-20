@@ -46,6 +46,7 @@ PNG (ArrayBuffer)
 |---|---|
 | `/articles/images/:slug` | 記事のOGP画像 |
 | `/scraps/images/:slug` | スクラップのOGP画像 |
+| `/books/images/:bookSlug` | BookのOGP画像 |
 
 レスポンスヘッダー: `Content-Type: image/png`
 

@@ -48,6 +48,18 @@ function Header() {
             記事
           </Link>
           <Link
+            href="/books"
+            color="gray.600"
+            fontWeight="500"
+            _hover={{ color: "blue.600" }}
+            _dark={{
+              color: "gray.300",
+              _hover: { color: "blue.400" },
+            }}
+          >
+            Book
+          </Link>
+          <Link
             href="/scraps"
             color="gray.600"
             fontWeight="500"

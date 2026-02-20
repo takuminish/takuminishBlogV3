@@ -51,10 +51,10 @@ function ScrapCard(props: Props) {
       transform={rotation}
       boxShadow={`4px 4px 8px ${selectedColor.shadow}40`}
       position="relative"
+      transition="all 0.2s ease"
       _hover={{
         transform: `${rotation} scale(1.02)`,
         boxShadow: `6px 6px 12px ${selectedColor.shadow}60`,
-        transition: "all 0.2s ease",
         zIndex: 10,
       }}
       _before={{

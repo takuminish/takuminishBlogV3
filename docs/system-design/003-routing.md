@@ -23,6 +23,7 @@ Honoのルーティング機能を使用したURL設計を定義する。
 
 サブルーターとして以下をマウントする:
 - `/articles` → `articleApp`
+- `/books` → `bookApp`
 - `/scraps` → `scrapApp`
 
 ### 記事ルーター（`src/articles/articles.controller.tsx`）
@@ -40,6 +41,17 @@ Honoのルーティング機能を使用したURL設計を定義する。
 | GET | `/scraps/` | スクラップ一覧 | `ScrapIndexPage` |
 | GET | `/scraps/:slug` | スクラップ詳細 | `ScrapDetailPage` |
 | GET | `/scraps/images/:slug` | スクラップOGP画像（PNG） | バイナリレスポンス |
+
+### Bookルーター（`src/books/books.controller.tsx`）
+
+| メソッド | パス | 説明 | レンダリング |
+|---|---|---|---|
+| GET | `/books/` | Book一覧 | `BookIndexPage` |
+| GET | `/books/:bookSlug` | Book詳細（目次） | `BookDetailPage` |
+| GET | `/books/:bookSlug/chapters` | Chapter一覧 | `ChapterListPage` |
+| GET | `/books/:bookSlug/chapters/:chapterSlug` | Chapter詳細 | `ChapterDetailPage` |
+| GET | `/books/:bookSlug/articles/:articleSlug` | Book内記事 | `BookArticlePage` |
+| GET | `/books/images/:bookSlug` | Book OGP画像（PNG） | バイナリレスポンス |
 
 ## SSGパラメータ
 
