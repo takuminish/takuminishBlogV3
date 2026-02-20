@@ -31,9 +31,11 @@ function BookArticlePage(props: Props) {
         <Text fontSize="sm" color="gray.500" _dark={{ color: "gray.400" }}>
           <Link
             href={`/books/${book.slug}`}
-            color="blue.600"
-            _hover={{ color: "blue.700" }}
-            _dark={{ color: "blue.400", _hover: { color: "blue.300" } }}
+            color="amber.700"
+            fontWeight="500"
+            fontFamily="Georgia, 'Times New Roman', serif"
+            _hover={{ color: "amber.800" }}
+            _dark={{ color: "amber.400", _hover: { color: "amber.300" } }}
           >
             {book.title}
           </Link>
@@ -51,6 +53,7 @@ function BookArticlePage(props: Props) {
           size="3xl"
           color="gray.800"
           fontWeight="700"
+          fontFamily="Georgia, 'Times New Roman', serif"
           mb="md"
           lineHeight="1.2"
           _dark={{ color: "gray.100" }}
@@ -87,11 +90,11 @@ function BookArticlePage(props: Props) {
             {nav.prev && (
               <Link
                 href={`/books/${book.slug}/articles/${nav.prev.slug}`}
-                color="blue.600"
-                _hover={{ color: "blue.700" }}
+                color="amber.700"
+                _hover={{ color: "amber.800" }}
                 _dark={{
-                  color: "blue.400",
-                  _hover: { color: "blue.300" },
+                  color: "amber.400",
+                  _hover: { color: "amber.300" },
                 }}
               >
                 &larr; {nav.prev.title}
@@ -102,11 +105,11 @@ function BookArticlePage(props: Props) {
             {nav.next && (
               <Link
                 href={`/books/${book.slug}/articles/${nav.next.slug}`}
-                color="blue.600"
-                _hover={{ color: "blue.700" }}
+                color="amber.700"
+                _hover={{ color: "amber.800" }}
                 _dark={{
-                  color: "blue.400",
-                  _hover: { color: "blue.300" },
+                  color: "amber.400",
+                  _hover: { color: "amber.300" },
                 }}
               >
                 {nav.next.title} &rarr;

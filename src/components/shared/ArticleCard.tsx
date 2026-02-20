@@ -25,10 +25,10 @@ function ArticleCard(props: Props) {
       border="1px solid"
       borderColor="border"
       bg="white"
+      transition="all 0.2s ease"
       _hover={{
         borderColor: "gray.300",
         transform: "translateY(-1px)",
-        transition: "all 0.2s ease",
       }}
       _dark={{
         bg: "gray.800",

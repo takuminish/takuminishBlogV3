@@ -9,7 +9,7 @@ type Props = {
   articleCount: number;
 };
 
-/** Book一覧のカードコンポーネント */
+/** Book一覧のカードコンポーネント（左に背表紙アクセント） */
 function BookCard(props: Props) {
   const { title, description, date, href, articleCount } = props;
 
@@ -25,20 +25,30 @@ function BookCard(props: Props) {
     <LinkBox
       as="article"
       p="lg"
+      pl="calc(8px + 1rem)"
       border="1px solid"
       borderColor="border"
       bg="white"
+      position="relative"
+      transition="all 0.2s ease"
       _hover={{
         borderColor: "gray.300",
         transform: "translateY(-1px)",
-        transition: "all 0.2s ease",
+      }}
+      _before={{
+        content: '""',
+        position: "absolute",
+        top: "0",
+        left: "0",
+        bottom: "0",
+        width: "8px",
+        bg: "amber.600",
       }}
       _dark={{
         bg: "gray.800",
         borderColor: "gray.700",
-        _hover: {
-          borderColor: "gray.600",
-        },
+        _hover: { borderColor: "gray.600" },
+        _before: { bg: "amber.500" },
       }}
     >
       <LinkOverlay href={href} />
@@ -47,6 +57,7 @@ function BookCard(props: Props) {
         color="gray.800"
         mb="sm"
         fontWeight="600"
+        fontFamily="Georgia, 'Times New Roman', serif"
         _dark={{ color: "gray.100" }}
       >
         {title}
@@ -65,7 +76,12 @@ function BookCard(props: Props) {
         <Text fontSize="sm" color="gray.500" _dark={{ color: "gray.400" }}>
           {formatDate(date)}
         </Text>
-        <Text fontSize="sm" color="gray.500" _dark={{ color: "gray.400" }}>
+        <Text
+          fontSize="sm"
+          color="amber.700"
+          fontWeight="500"
+          _dark={{ color: "amber.400" }}
+        >
           {articleCount}記事
         </Text>
       </Box>

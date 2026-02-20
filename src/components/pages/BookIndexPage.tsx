@@ -18,6 +18,7 @@ function BookIndexPage(props: Props) {
           size="2xl"
           color="gray.800"
           fontWeight="700"
+          fontFamily="Georgia, 'Times New Roman', serif"
           _dark={{ color: "gray.100" }}
         >
           Book一覧
