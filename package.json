@@ -35,7 +35,7 @@
     "markdownlint-cli": "0.41.0",
     "textlint": "14.0.4",
     "textlint-rule-preset-ja-technical-writing": "10.0.2",
-    "vite": "5.3.4",
+    "vite": "7.3.1",
     "wrangler": "3.47.0"
   }
 }
